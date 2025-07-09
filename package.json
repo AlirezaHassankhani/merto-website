@@ -3,5 +3,7 @@
     "@tailwindcss/cli": "^4.1.11",
     "tailwindcss": "^4.1.11"
   },
-  
+  "scripts": {
+    "tailwind": "npx @tailwindcss/cli -i ./src/css/input.css -o ./css/style.css"
+  }
 }
