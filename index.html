@@ -540,7 +540,7 @@
         </div>
       </div>
 
-      <div class="md:hidden fixed top-0 bottom-0 z-50 w-xs bg-white text-sm">
+      <div data-is-open="false" class="md:hidden transition-all fixed top-0 bottom-0 -left-80 z-50 w-xs bg-white text-sm data-[is-open='true']:left-0">
         <div class="flex">
           <div
             class="grow bg-black text-white flex justify-center items-center gap-1"
@@ -622,8 +622,8 @@
                 </svg>
 
                 Best Discount
-              </div></a
-            >
+              </div>
+            </a>
 
             <a href="#">
               <div class="flex justify-between items-center">
@@ -643,7 +643,7 @@
                   ></path>
                 </svg>
               </div>
-              </a>
+            </a>
           </nav>
 
           <div
@@ -709,6 +709,6 @@
 
     <!-- Overlay -->
 
-    <div class="fixed top-0 bottom-0 w-full bg-black/50 z-40"></div>
+    <div class="fixed top-0 bottom-0 w-full bg-black/50 z-40 hidden"></div>
   </body>
 </html>

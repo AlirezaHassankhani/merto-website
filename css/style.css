@@ -201,6 +201,9 @@
   .-left-8 {
     left: calc(var(--spacing) * -8);
   }
+  .-left-80 {
+    left: calc(var(--spacing) * -80);
+  }
   .z-40 {
     z-index: 40;
   }
@@ -233,6 +236,9 @@
   }
   .flex {
     display: flex;
+  }
+  .hidden {
+    display: none;
   }
   .inline-block {
     display: inline-block;
@@ -548,6 +554,11 @@
       @media (hover: hover) {
         color: var(--color-red-600);
       }
+    }
+  }
+  .data-\[is-open\=\'true\'\]\:left-0 {
+    &[data-is-open='true'] {
+      left: calc(var(--spacing) * 0);
     }
   }
   .max-xl\:hidden {
