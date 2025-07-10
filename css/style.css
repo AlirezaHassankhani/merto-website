@@ -693,6 +693,11 @@
       display: none;
     }
   }
+  .max-md\:hidden {
+    @media (width < 48rem) {
+      display: none;
+    }
+  }
   .lg\:flex-3\/12 {
     @media (width >= 64rem) {
       flex: calc(3/12 * 100%);

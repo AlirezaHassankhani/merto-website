@@ -13,7 +13,7 @@
   </head>
   <body>
     <header>
-      <div class="border-b border-primary">
+      <div class="max-md:hidden border-b border-primary">
         <div class="container">
           <div class="flex justify-between items-center text-xs py-2.5">
             <div class="flex gap-4">
@@ -181,7 +181,7 @@
         </div>
       </div>
 
-      <div class="container">
+      <div class="max-md:hidden container">
         <div class="flex justify-between gap-10 items-center py-6 text-sm">
           <div class="shrink-0">
             <div class="inline-block">
@@ -196,7 +196,7 @@
           </div>
 
           <div class="flex-1/2 bg-primary-200 flex justify-between rounded-md">
-            <select name="term" class="py-2.5 pl-5 pr-8">
+            <select name="term" class="py-2.5 pl-5">
               <option value="">All Categories</option>
               <option value="autopart">Autopart</option>
               <option value="accessories-automotive">
@@ -463,6 +463,8 @@
           </div>
         </div>
       </div>
+
+      <!-- Mobile Menu -->
     </header>
   </body>
 </html>
