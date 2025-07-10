@@ -100,7 +100,7 @@
             </div>
 
             <div class="flex gap-4">
-              <ul class="flex gap-4">
+              <ul class="flex gap-4 [&>li>a>svg]:transition-all [&>li>a>svg:hover]:fill-red-600">
                 <li>
                   <a href="#">
                     <svg
@@ -170,7 +170,7 @@
                 </li>
               </ul>
 
-              <div class="border-l border-primary pl-4">
+              <div class="border-l border-primary pl-4 transition-all hover:text-red-600">
                 <a href="#">
                   Contact us 24/7
                   <span class="font-semibold ml-2">(+92) 3842 7879</span>
@@ -184,13 +184,15 @@
       <div class="container">
         <div class="flex justify-between gap-10 items-center py-6 text-sm">
           <div class="flex-3/12">
-            <a href="#">
-              <img
-                src="./assets/images/logo-cosmetic.png"
-                alt="logo cosmetic"
-                class="h-10"
-              />
-            </a>
+            <div class="inline-block">
+              <a href="#" class="max-w-fit">
+                <img
+                  src="./assets/images/logo-cosmetic.png"
+                  alt="logo cosmetic"
+                  class="h-10"
+                />
+              </a>
+            </div>
           </div>
 
           <div class="flex-8/12 bg-primary-200 flex justify-between rounded-md">

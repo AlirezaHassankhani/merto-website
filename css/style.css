@@ -297,6 +297,9 @@
   .hidden {
     display: none;
   }
+  .inline-block {
+    display: inline-block;
+  }
   .table {
     display: table;
   }
@@ -333,6 +336,12 @@
   }
   .w-20 {
     width: calc(var(--spacing) * 20);
+  }
+  .w-fit {
+    width: fit-content;
+  }
+  .max-w-fit {
+    max-width: fit-content;
   }
   .flex-3 {
     flex: 3;
@@ -646,6 +655,23 @@
   .\[\&\>a\:hover\]\:text-red-600 {
     &>a:hover {
       color: var(--color-red-600);
+    }
+  }
+  .\[\&\>li\>a\>svg\]\:fill-red-600 {
+    &>li>a>svg {
+      fill: var(--color-red-600);
+    }
+  }
+  .\[\&\>li\>a\>svg\]\:transition-all {
+    &>li>a>svg {
+      transition-property: all;
+      transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+      transition-duration: var(--tw-duration, var(--default-transition-duration));
+    }
+  }
+  .\[\&\>li\>a\>svg\:hover\]\:fill-red-600 {
+    &>li>a>svg:hover {
+      fill: var(--color-red-600);
     }
   }
 }
