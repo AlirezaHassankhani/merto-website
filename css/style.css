@@ -322,6 +322,15 @@
   .h-0 {
     height: calc(var(--spacing) * 0);
   }
+  .h-3 {
+    height: calc(var(--spacing) * 3);
+  }
+  .h-7 {
+    height: calc(var(--spacing) * 7);
+  }
+  .h-8 {
+    height: calc(var(--spacing) * 8);
+  }
   .h-10 {
     height: calc(var(--spacing) * 10);
   }
@@ -343,6 +352,24 @@
   .max-w-fit {
     max-width: fit-content;
   }
+  .flex-1 {
+    flex: 1;
+  }
+  .flex-1\/2 {
+    flex: calc(1/2 * 100%);
+  }
+  .flex-1\/3 {
+    flex: calc(1/3 * 100%);
+  }
+  .flex-1\/12 {
+    flex: calc(1/12 * 100%);
+  }
+  .flex-2 {
+    flex: 2;
+  }
+  .flex-2\/12 {
+    flex: calc(2/12 * 100%);
+  }
   .flex-3 {
     flex: 3;
   }
@@ -354,6 +381,15 @@
   }
   .flex-8\/12 {
     flex: calc(8/12 * 100%);
+  }
+  .flex-shrink {
+    flex-shrink: 1;
+  }
+  .shrink {
+    flex-shrink: 1;
+  }
+  .shrink-0 {
+    flex-shrink: 0;
   }
   .flex-grow {
     flex-grow: 1;
@@ -509,6 +545,9 @@
     font-size: var(--text-xs);
     line-height: var(--tw-leading, var(--text-xs--line-height));
   }
+  .text-\[13px\] {
+    font-size: 13px;
+  }
   .font-medium {
     --tw-font-weight: var(--font-weight-medium);
     font-weight: var(--font-weight-medium);
@@ -644,6 +683,37 @@
       }
     }
   }
+  .max-xl\:hidden {
+    @media (width < 80rem) {
+      display: none;
+    }
+  }
+  .max-lg\:hidden {
+    @media (width < 64rem) {
+      display: none;
+    }
+  }
+  .lg\:flex-3\/12 {
+    @media (width >= 64rem) {
+      flex: calc(3/12 * 100%);
+    }
+  }
+  .xl\:h-10 {
+    @media (width >= 80rem) {
+      height: calc(var(--spacing) * 10);
+    }
+  }
+  .xl\:text-sm {
+    @media (width >= 80rem) {
+      font-size: var(--text-sm);
+      line-height: var(--tw-leading, var(--text-sm--line-height));
+    }
+  }
+  .\[\&\>a\]\:flex {
+    &>a {
+      display: flex;
+    }
+  }
   .\[\&\>a\]\:inline-block {
     &>a {
       display: inline-block;
@@ -652,6 +722,11 @@
   .\[\&\>a\]\:h-10 {
     &>a {
       height: calc(var(--spacing) * 10);
+    }
+  }
+  .\[\&\>a\]\:items-center {
+    &>a {
+      align-items: center;
     }
   }
   .\[\&\>a\]\:text-red-600 {

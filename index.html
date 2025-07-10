@@ -91,7 +91,7 @@
               </div>
 
               <nav
-                class="border-l pl-4 border-primary flex gap-4 [&>a]:transition-all [&>a:hover]:text-red-600"
+                class="max-lg:hidden border-l pl-4 border-primary flex gap-4 [&>a]:transition-all [&>a:hover]:text-red-600"
               >
                 <a href="#">Track Order</a>
                 <a href="#">Contact</a>
@@ -183,19 +183,19 @@
 
       <div class="container">
         <div class="flex justify-between gap-10 items-center py-6 text-sm">
-          <div class="flex-3/12">
+          <div class="shrink-0">
             <div class="inline-block">
               <a href="#" class="max-w-fit">
                 <img
                   src="./assets/images/logo-cosmetic.png"
                   alt="logo cosmetic"
-                  class="h-10"
+                  class="h-8 xl:h-10"
                 />
               </a>
             </div>
           </div>
 
-          <div class="flex-8/12 bg-primary-200 flex justify-between rounded-md">
+          <div class="flex-1/2 bg-primary-200 flex justify-between rounded-md">
             <select name="term" class="py-2.5 pl-5 pr-8">
               <option value="">All Categories</option>
               <option value="autopart">Autopart</option>
@@ -374,7 +374,7 @@
                   />
                 </svg>
 
-                <p>Account</p>
+                <p class="max-xl:hidden">Account</p>
               </div>
             </a>
 
@@ -414,8 +414,8 @@
           </div>
         </div>
 
-        <div class="flex items-center justify-between text-sm py-2">
-          <nav class="flex gap-8 [&>a]:h-10 [&>a]:inline-block [&>a]:transition-all [&>a:hover]:text-red-600 font-medium">
+        <div class="flex items-center justify-between text-xs xl:text-sm py-2">
+          <nav class="flex gap-8 [&>a]:h-10 [&>a]:flex [&>a]:items-center [&>a]:transition-all [&>a:hover]:text-red-600 font-medium">
             <a href="#">Pages</a>
             <a href="#">Gift Guide</a>
             <a href="#">Skincare</a>
@@ -443,7 +443,7 @@
             >
           </nav>
 
-          <div class="flex items-center gap-2 cursor-pointer transition-all hover:text-red-600">
+          <div class="max-xl:hidden flex items-center gap-2 cursor-pointer transition-all hover:text-red-600">
             <p>Recently viewed</p>
 
             <svg
