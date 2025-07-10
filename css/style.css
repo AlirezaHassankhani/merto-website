@@ -450,6 +450,12 @@
   .stroke-red-600 {
     stroke: var(--color-red-600);
   }
+  .p-2 {
+    padding: calc(var(--spacing) * 2);
+  }
+  .p-2\.5 {
+    padding: calc(var(--spacing) * 2.5);
+  }
   .p-3 {
     padding: calc(var(--spacing) * 3);
   }
@@ -510,6 +516,9 @@
   .font-semibold {
     --tw-font-weight: var(--font-weight-semibold);
     font-weight: var(--font-weight-semibold);
+  }
+  .text-red-600 {
+    color: var(--color-red-600);
   }
   .underline {
     text-decoration-line: underline;
