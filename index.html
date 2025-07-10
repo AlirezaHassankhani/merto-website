@@ -13,55 +13,86 @@
   </head>
   <body>
     <header>
-      <div class="border-b border-primary py-2">
+      <div class="border-b border-primary">
         <div class="container">
-          <div class="flex justify-between items-center py-2 text-xs">
+          <div class="flex justify-between items-center text-xs py-2.5">
             <div class="flex gap-4">
               <div class="flex gap-4">
-                <div
-                  class="flex items-center gap-1 cursor-pointer transition-all hover:text-red-600"
-                >
-                  <p>English</p>
-
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="size-2.5"
+                <div class="relative group">
+                  <div
+                    class="flex items-center gap-1 transition-all hover:text-red-600 cursor-pointer"
                   >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="m19.5 8.25-7.5 7.5-7.5-7.5"
-                    />
-                  </svg>
+                    <p>English</p>
+
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-2.5"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                      />
+                    </svg>
+                  </div>
+
+                  <ul
+                    class="transition-all duration-300 group-hover:visible group-hover:scale-100 scale-0 invisible absolute top-5 -left-8 bg-white p-8 shadow-lg rounded-md space-y-4"
+                  >
+                    <li>
+                      <div class="cursor-pointer group/item w-16">
+                        <p class="group-hover/item:text-red-600">Persian</p>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
 
-                <div
-                  class="flex items-center gap-1 cursor-pointer transition-all hover:text-red-600"
-                >
-                  <p>USD</p>
-
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="size-2.5"
+                <div class="relative group">
+                  <div
+                    class="flex items-center gap-1 cursor-pointer transition-all hover:text-red-600"
                   >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="m19.5 8.25-7.5 7.5-7.5-7.5"
-                    />
-                  </svg>
+                    <p>USD</p>
+
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="none"
+                      viewBox="0 0 24 24"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-2.5"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        d="m19.5 8.25-7.5 7.5-7.5-7.5"
+                      />
+                    </svg>
+                  </div>
+
+                  <ul
+                    class="transition-all duration-300 group-hover:visible group-hover:scale-100 scale-0 invisible absolute top-5 -left-8 bg-white p-8 shadow-lg rounded-md space-y-4"
+                  >
+                    <li>
+                      <div class="cursor-pointer group/item w-16">
+                        <p class="group-hover/item:text-red-600">IRR</p>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="cursor-pointer group/item w-16">
+                        <p class="group-hover/item:text-red-600">BTC</p>
+                      </div>
+                    </li>
+                  </ul>
                 </div>
               </div>
 
-              <nav class="border-l pl-4 border-primary flex gap-4">
+              <nav
+                class="border-l pl-4 border-primary flex gap-4 [&>a]:transition-all [&>a:hover]:text-red-600"
+              >
                 <a href="#">Track Order</a>
                 <a href="#">Contact</a>
                 <a href="#">FAQs</a>
