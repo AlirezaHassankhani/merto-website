@@ -654,6 +654,11 @@
       height: calc(var(--spacing) * 10);
     }
   }
+  .\[\&\>a\]\:text-red-600 {
+    &>a {
+      color: var(--color-red-600);
+    }
+  }
   .\[\&\>a\]\:transition-all {
     &>a {
       transition-property: all;
