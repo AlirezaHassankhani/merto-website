@@ -7,8 +7,11 @@
       "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
     --font-mono: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono",
       "Courier New", monospace;
+    --spacing: 0.25rem;
+    --container-7xl: 80rem;
     --default-font-family: var(--font-sans);
     --default-mono-font-family: var(--font-mono);
+    --font-poppins: "poppins";
   }
 }
 @layer base {
@@ -160,8 +163,46 @@
   .relative {
     position: relative;
   }
+  .container {
+    width: 100%;
+    @media (width >= 40rem) {
+      max-width: 40rem;
+    }
+    @media (width >= 48rem) {
+      max-width: 48rem;
+    }
+    @media (width >= 64rem) {
+      max-width: 64rem;
+    }
+    @media (width >= 80rem) {
+      max-width: 80rem;
+    }
+    @media (width >= 96rem) {
+      max-width: 96rem;
+    }
+  }
   .transform {
     transform: var(--tw-rotate-x,) var(--tw-rotate-y,) var(--tw-rotate-z,) var(--tw-skew-x,) var(--tw-skew-y,);
+  }
+  .font-poppins {
+    font-family: var(--font-poppins);
+  }
+}
+@layer utilities {
+  .container {
+    max-width: 100%;
+    @media (width < 96rem) {
+      padding-inline: calc(var(--spacing) * 12);
+    }
+    @media (width < 64rem) {
+      padding-inline: calc(var(--spacing) * 5);
+    }
+    @media (width >= 96rem) {
+      margin-inline: auto;
+    }
+    @media (width >= 96rem) {
+      max-width: var(--container-7xl);
+    }
   }
 }
 @property --tw-rotate-x {
