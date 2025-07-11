@@ -34,7 +34,6 @@
     --color-primary: #E5E5E5;
     --color-primary-200: #F5F5F5;
     --color-primary-400: #848484;
-    --text-md: 1rem;
   }
 }
 @layer base {
@@ -252,12 +251,6 @@
   .ml-2 {
     margin-left: calc(var(--spacing) * 2);
   }
-  .line-clamp-1 {
-    overflow: hidden;
-    display: -webkit-box;
-    -webkit-box-orient: vertical;
-    -webkit-line-clamp: 1;
-  }
   .flex {
     display: flex;
   }
@@ -293,8 +286,9 @@
     width: calc(var(--spacing) * 6);
     height: calc(var(--spacing) * 6);
   }
-  .h-1 {
-    height: calc(var(--spacing) * 1);
+  .size-8 {
+    width: calc(var(--spacing) * 8);
+    height: calc(var(--spacing) * 8);
   }
   .h-7 {
     height: calc(var(--spacing) * 7);
@@ -307,15 +301,6 @@
   }
   .h-10\/12 {
     height: calc(10/12 * 100%);
-  }
-  .h-11 {
-    height: calc(var(--spacing) * 11);
-  }
-  .h-11\/12 {
-    height: calc(11/12 * 100%);
-  }
-  .h-44 {
-    height: calc(var(--spacing) * 44);
   }
   .w-16 {
     width: calc(var(--spacing) * 16);
@@ -377,20 +362,17 @@
   .items-center {
     align-items: center;
   }
-  .justify-around {
-    justify-content: space-around;
-  }
   .justify-between {
     justify-content: space-between;
   }
   .justify-center {
     justify-content: center;
   }
-  .justify-evenly {
-    justify-content: space-evenly;
-  }
   .gap-1 {
     gap: calc(var(--spacing) * 1);
+  }
+  .gap-1\.5 {
+    gap: calc(var(--spacing) * 1.5);
   }
   .gap-2 {
     gap: calc(var(--spacing) * 2);
@@ -420,6 +402,9 @@
       margin-block-end: calc(calc(var(--spacing) * 4) * calc(1 - var(--tw-space-y-reverse)));
     }
   }
+  .rounded-full {
+    border-radius: calc(infinity * 1px);
+  }
   .rounded-md {
     border-radius: var(--radius-md);
   }
@@ -442,6 +427,10 @@
   .border-y {
     border-block-style: var(--tw-border-style);
     border-block-width: 1px;
+  }
+  .border-r {
+    border-right-style: var(--tw-border-style);
+    border-right-width: 1px;
   }
   .border-b {
     border-bottom-style: var(--tw-border-style);
@@ -511,14 +500,14 @@
   .p-8 {
     padding: calc(var(--spacing) * 8);
   }
+  .px-2 {
+    padding-inline: calc(var(--spacing) * 2);
+  }
+  .px-2\.5 {
+    padding-inline: calc(var(--spacing) * 2.5);
+  }
   .px-5 {
     padding-inline: calc(var(--spacing) * 5);
-  }
-  .px-7 {
-    padding-inline: calc(var(--spacing) * 7);
-  }
-  .px-8 {
-    padding-inline: calc(var(--spacing) * 8);
   }
   .py-2 {
     padding-block: calc(var(--spacing) * 2);
@@ -544,16 +533,15 @@
   .pl-5 {
     padding-left: calc(var(--spacing) * 5);
   }
+  .pl-8 {
+    padding-left: calc(var(--spacing) * 8);
+  }
   .text-center {
     text-align: center;
   }
   .text-2xl {
     font-size: var(--text-2xl);
     line-height: var(--tw-leading, var(--text-2xl--line-height));
-  }
-  .text-3xl {
-    font-size: var(--text-3xl);
-    line-height: var(--tw-leading, var(--text-3xl--line-height));
   }
   .text-sm {
     font-size: var(--text-sm);
@@ -562,9 +550,6 @@
   .text-xs {
     font-size: var(--text-xs);
     line-height: var(--tw-leading, var(--text-xs--line-height));
-  }
-  .text-md {
-    font-size: var(--text-md);
   }
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
@@ -673,24 +658,9 @@
       display: none;
     }
   }
-  .max-lg\:flex {
-    @media (width < 64rem) {
-      display: flex;
-    }
-  }
   .max-lg\:hidden {
     @media (width < 64rem) {
       display: none;
-    }
-  }
-  .max-lg\:flex-wrap {
-    @media (width < 64rem) {
-      flex-wrap: wrap;
-    }
-  }
-  .max-lg\:rounded-tr-\[3rem\] {
-    @media (width < 64rem) {
-      border-top-right-radius: 3rem;
     }
   }
   .max-lg\:rounded-tr-\[4rem\] {
@@ -698,29 +668,9 @@
       border-top-right-radius: 4rem;
     }
   }
-  .max-lg\:rounded-tr-\[6rem\] {
-    @media (width < 64rem) {
-      border-top-right-radius: 6rem;
-    }
-  }
-  .max-lg\:rounded-bl-\[3rem\] {
-    @media (width < 64rem) {
-      border-bottom-left-radius: 3rem;
-    }
-  }
   .max-lg\:rounded-bl-\[4rem\] {
     @media (width < 64rem) {
       border-bottom-left-radius: 4rem;
-    }
-  }
-  .max-lg\:rounded-bl-\[6rem\] {
-    @media (width < 64rem) {
-      border-bottom-left-radius: 6rem;
-    }
-  }
-  .max-lg\:text-center {
-    @media (width < 64rem) {
-      text-align: center;
     }
   }
   .max-md\:hidden {
@@ -748,14 +698,14 @@
       grid-template-columns: repeat(4, minmax(0, 1fr));
     }
   }
-  .md\:items-center {
-    @media (width >= 48rem) {
-      align-items: center;
-    }
-  }
   .md\:justify-around {
     @media (width >= 48rem) {
       justify-content: space-around;
+    }
+  }
+  .md\:px-8 {
+    @media (width >= 48rem) {
+      padding-inline: calc(var(--spacing) * 8);
     }
   }
   .md\:max-lg\:flex-wrap {
