@@ -12,6 +12,7 @@
     <title>merto</title>
   </head>
   <body>
+    <!-- Header -->
     <header>
       <div class="max-md:hidden border-b border-primary">
         <div class="container">
@@ -425,9 +426,7 @@
             </div>
           </div>
 
-          <div
-            class="flex items-center justify-between text-xs xl:text-sm"
-          >
+          <div class="flex items-center justify-between text-xs xl:text-sm">
             <nav
               class="flex gap-8 [&>a]:py-2 [&>a]:border-red-600 [&>a]:transition-all [&>a:hover]:text-red-600 [&>a:hover]:border-b font-medium"
             >
@@ -737,8 +736,78 @@
       </div>
     </header>
 
-    <!-- Overlay -->
+    <!-- Main -->
+    <main>
+      <div class="container my-20">
+        <section>
+          <h3 class="text-center text-2xl font-semibold mb-8">Your favorite brands</h3>
 
+          <div class="flex justify-center gap-10">
+            <a href="#">
+              <div class="relative flex flex-col items-center group">
+                <div>
+                  <img
+                    src="./assets/images/cosmetic-brand-1.png"
+                    alt="brand image"
+                  />
+                </div>
+
+                <p class="text-md font-medium">Vichy</p>
+
+                <div class="transition duration-300 group-hover:-scale-x-100 absolute -z-10 top-0 w-full h-44 bg-[#61D1F4] rounded-tr-[6rem] rounded-bl-[6rem] rounded-tl-sm rounded-br-sm"></div>
+              </div>
+            </a>
+
+            <a href="#">
+              <div class="relative flex flex-col items-center group">
+                <div>
+                  <img
+                    src="./assets/images/cosmetic-brand-2.png"
+                    alt="brand image"
+                  />
+                </div>
+
+                <p class="text-md font-medium">Eucerin</p>
+
+                <div class="transition duration-300 group-hover:-scale-x-100 absolute -z-10 top-0 w-full h-44 bg-[#FDBA6D] rounded-tr-[6rem] rounded-bl-[6rem] rounded-tl-sm rounded-br-sm"></div>
+              </div>
+            </a>
+
+            <a href="#">
+              <div class="relative flex flex-col items-center group">
+                <div>
+                  <img
+                    src="./assets/images/cosmetic-brand-3.png"
+                    alt="brand image"
+                  />
+                </div>
+
+                <p class="text-md font-medium">La Roche-Posay</p>
+
+                <div class="transition duration-300 group-hover:-scale-x-100 absolute -z-10 top-0 w-full h-44 bg-[#F05D74] rounded-tr-[6rem] rounded-bl-[6rem] rounded-tl-sm rounded-br-sm"></div>
+              </div>
+            </a>
+
+            <a href="#">
+              <div class="relative flex flex-col items-center group">
+                <div>
+                  <img
+                    src="./assets/images/cosmetic-brand-4.png"
+                    alt="brand image"
+                  />
+                </div>
+
+                <p class="text-md font-medium">Cerave</p>
+
+                <div class="transition duration-300 group-hover:-scale-x-100 absolute -z-10 top-0 w-full h-44 bg-[#7CBF5C] rounded-tr-[6rem] rounded-bl-[6rem] rounded-tl-sm rounded-br-sm"></div>
+              </div>
+            </a>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <!-- Overlay -->
     <div class="fixed top-0 bottom-0 w-full bg-black/50 z-40 hidden"></div>
   </body>
 </html>
