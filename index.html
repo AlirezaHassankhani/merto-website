@@ -741,8 +741,10 @@
         </section>
 
         <!-- Flash Deals -->
-        <section>
-          <div class="flex justify-between items-center mb-8">
+        <section class="mb-20">
+          <div
+            class="flex max-md:flex-col max-md:gap-2.5 justify-between items-center mb-8"
+          >
             <p class="text-2xl font-semibold">Flash Deals</p>
 
             <div class="flex items-center gap-8">
@@ -768,7 +770,9 @@
                 </div>
               </div>
 
-              <div class="pl-8 text-sm font-normal border-l border-primary">
+              <div
+                class="max-lg:hidden pl-8 text-sm font-normal border-l border-primary"
+              >
                 <a href="#">See All Products</a>
               </div>
             </div>
@@ -778,7 +782,9 @@
             <div class="swiper border border-primary">
               <div class="swiper-wrapper divide-x divide-primary">
                 <div class="swiper-slide">
-                  <div class="relative flex flex-col gap-1.5 p-5 rounded-md group/item">
+                  <div
+                    class="relative flex flex-col gap-1.5 p-2.5 md:p-3 xl:p-5 rounded-md group/item"
+                  >
                     <div>
                       <a href="#">
                         <img
@@ -826,7 +832,7 @@
                     </div>
 
                     <div
-                      class="absolute top-5 left-5 bg-red-600 px-2 rounded-md"
+                      class="absolute top-2.5 left-2.5 md:top-3 md:left-3 xl:top-5 xl:left-5 bg-red-600 px-2 rounded-md"
                     >
                       <span class="text-xs text-white font-medium">-17%</span>
                     </div>
@@ -893,7 +899,9 @@
                 </div>
 
                 <div class="swiper-slide">
-                  <div class="relative flex flex-col gap-1.5 p-5 group/item">
+                  <div
+                    class="relative flex flex-col gap-1.5 p-2.5 md:p-3 xl:p-5 group/item"
+                  >
                     <div>
                       <a href="#">
                         <img
@@ -941,7 +949,7 @@
                     </div>
 
                     <div
-                      class="absolute top-5 left-5 bg-red-600 px-2 rounded-md"
+                      class="absolute top-2.5 left-2.5 md:top-3 md:left-3 xl:top-5 xl:left-5 bg-red-600 px-2 rounded-md"
                     >
                       <span class="text-xs text-white font-medium">-17%</span>
                     </div>
@@ -1008,7 +1016,9 @@
                 </div>
 
                 <div class="swiper-slide">
-                  <div class="relative flex flex-col gap-1.5 p-5 group/item">
+                  <div
+                    class="relative flex flex-col gap-1.5 p-2.5 md:p-3 xl:p-5 group/item"
+                  >
                     <div>
                       <a href="#">
                         <img
@@ -1056,7 +1066,7 @@
                     </div>
 
                     <div
-                      class="absolute top-5 left-5 bg-red-600 px-2 rounded-md"
+                      class="absolute top-2.5 left-2.5 md:top-3 md:left-3 xl:top-5 xl:left-5 bg-red-600 px-2 rounded-md"
                     >
                       <span class="text-xs text-white font-medium">-17%</span>
                     </div>
@@ -1123,7 +1133,9 @@
                 </div>
 
                 <div class="swiper-slide">
-                  <div class="relative flex flex-col gap-1.5 p-5 group/item">
+                  <div
+                    class="relative flex flex-col gap-1.5 p-2.5 md:p-3 xl:p-5 group/item"
+                  >
                     <div>
                       <a href="#">
                         <img
@@ -1171,7 +1183,7 @@
                     </div>
 
                     <div
-                      class="absolute top-5 left-5 bg-red-600 px-2 rounded-md"
+                      class="absolute top-2.5 left-2.5 md:top-3 md:left-3 xl:top-5 xl:left-5 bg-red-600 px-2 rounded-md"
                     >
                       <span class="text-xs text-white font-medium">-17%</span>
                     </div>
@@ -1238,7 +1250,9 @@
                 </div>
 
                 <div class="swiper-slide">
-                  <div class="relative flex flex-col gap-1.5 p-5 group/item">
+                  <div
+                    class="relative flex flex-col gap-1.5 p-2.5 md:p-3 xl:p-5 group/item"
+                  >
                     <div>
                       <a href="#">
                         <img
@@ -1286,7 +1300,7 @@
                     </div>
 
                     <div
-                      class="absolute top-5 left-5 bg-red-600 px-2 rounded-md"
+                      class="absolute top-2.5 left-2.5 md:top-3 md:left-3 xl:top-5 xl:left-5 bg-red-600 px-2 rounded-md"
                     >
                       <span class="text-xs text-white font-medium">-17%</span>
                     </div>
@@ -1353,7 +1367,9 @@
                 </div>
 
                 <div class="swiper-slide">
-                  <div class="relative flex flex-col gap-1.5 p-5 group/item">
+                  <div
+                    class="relative flex flex-col gap-1.5 p-2.5 md:p-3 xl:p-5 group/item"
+                  >
                     <div>
                       <a href="#">
                         <img
@@ -1401,7 +1417,7 @@
                     </div>
 
                     <div
-                      class="absolute top-5 left-5 bg-red-600 px-2 rounded-md"
+                      class="absolute top-2.5 left-2.5 md:top-3 md:left-3 xl:top-5 xl:left-5 bg-red-600 px-2 rounded-md"
                     >
                       <span class="text-xs text-white font-medium">-17%</span>
                     </div>
@@ -1499,7 +1515,115 @@
           </div>
         </section>
 
-        <section></section>
+        <!-- Category -->
+        <section>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <div class="relative">
+              <div>
+                <img
+                  src="./assets/images/banner1-demo6.jpg"
+                  alt="banner"
+                  class="rounded-md h-full w-full object-cover"
+                />
+              </div>
+
+              <div class="absolute top-0 w-3/5 p-4">
+                <p
+                  class="text-red-600 text-sm font-medium tracking-tighter mb-2"
+                >
+                  EYESHADOW
+                </p>
+
+                <p
+                  class="text-[6.2vw] md:text-[2.1vw] font-semibold leading-tight mb-3"
+                >
+                  99-Color Palette
+                </p>
+
+                <a href="#">
+                  <div
+                    class="max-w-2/3 flex justify-center text-white bg-black transition-all hover:bg-red-600 uppercase cursor-pointer rounded-md text-xs py-2 font-semibold"
+                  >
+                    shop now
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="relative">
+              <div>
+                <img
+                  src="./assets/images/banner2-demo6.jpg"
+                  alt="banner"
+                  class="rounded-md h-full w-full object-cover"
+                />
+              </div>
+
+              <div class="absolute top-0 w-3/5 p-4">
+                <p
+                  class="text-white text-sm font-medium tracking-tighter mb-2"
+                >
+                BODY SUNSCREEN
+                </p>
+
+                <p
+                  class="text-white text-[6.2vw] md:text-[2.1vw] font-semibold leading-tight mb-3"
+                >
+                SFS50 PA++ 200ml
+                </p>
+
+                <a href="#">
+                  <div
+                    class="max-w-2/3 flex justify-center text-white border border-white transition-all hover:bg-white hover:text-black uppercase cursor-pointer rounded-md text-xs py-2 font-semibold"
+                  >
+                    shop now
+                  </div>
+                </a>
+              </div>
+            </div>
+
+            <div class="relative">
+              <div>
+                <img
+                  src="./assets/images/banner3-demo6.jpg"
+                  alt="banner"
+                  class="rounded-md h-full w-full object-cover"
+                />
+              </div>
+
+              <div class="absolute top-0 w-3/5 p-4">
+                <p
+                  class="text-red-600 text-sm font-medium tracking-tighter mb-2"
+                >
+                MAKEUP BRUSH
+                </p>
+
+                <p
+                  class="text-[6.2vw] md:text-[2.1vw] font-semibold leading-tight mb-3"
+                >
+                4 Piece Brush Set
+                </p>
+
+                <a href="#">
+                  <div
+                    class="max-w-2/3 flex items-center gap-1 uppercase text-xs font-semibold"
+                  >
+                    shop now
+
+                    <svg
+                      fill="none"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-4"
+                    >
+                      <use href="/assets/icons.svg#icon-arrow-right"></use>
+                    </svg>
+                  </div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
 
@@ -1521,7 +1645,7 @@
 
         breakpoints: {
           600: {
-            slidesPerView: 3
+            slidesPerView: 3,
           },
 
           800: {
@@ -1530,8 +1654,8 @@
 
           1100: {
             slidesPerView: 5,
-          }
-        }
+          },
+        },
       });
     </script>
   </body>
