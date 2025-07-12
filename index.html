@@ -1512,12 +1512,26 @@
       const swiper = new Swiper(".swiper", {
         loop: true,
         dirction: "vertical",
-        slidesPerView: 5,
+        slidesPerView: 2,
 
         navigation: {
           nextEl: "#swiper-button-next",
           prevEl: "#swiper-button-prev",
         },
+
+        breakpoints: {
+          600: {
+            slidesPerView: 3
+          },
+
+          800: {
+            slidesPerView: 4,
+          },
+
+          1100: {
+            slidesPerView: 5,
+          }
+        }
       });
     </script>
   </body>
