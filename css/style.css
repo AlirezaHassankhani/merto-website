@@ -203,6 +203,9 @@
   .-top-3 {
     top: calc(var(--spacing) * -3);
   }
+  .-top-20 {
+    top: calc(var(--spacing) * -20);
+  }
   .-top-36 {
     top: calc(var(--spacing) * -36);
   }
@@ -1003,6 +1006,12 @@
     &[data-is-menu="true"] {
       border-style: var(--tw-border-style);
       border-width: 0px;
+    }
+  }
+  .data-\[is-menu\=true\]\:shadow {
+    &[data-is-menu="true"] {
+      --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+      box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
     }
   }
   .data-\[is-menu\=true\]\:shadow-md {

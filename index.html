@@ -7,15 +7,15 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900,100italic,200italic,300italic,400italic,500italic,600italic,700italic,800italic,900italic&display=swap&ver=1748016088"
     />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
-    />
+    <link rel="stylesheet" href="./css/swiper-bundle.css" />
     <link rel="stylesheet" href="./css/style.css" />
+
+    <script src="./js/swiper-bundle.js" defer></script>
+    <script src="./js/slider.js" defer></script>
+    <script src="./js/app.js" defer></script>
     <title>merto</title>
   </head>
   <body>
-    <!-- Header -->
     <header>
       <div class="max-md:hidden border-b border-primary">
         <div class="container">
@@ -144,7 +144,7 @@
       <div
         data-is-menu="false"
         id="menu"
-        class="group max-md:hidden bg-white border-b border-primary -top-36 transition-all z-50 min-w-full data-[is-menu=true]:fixed data-[is-menu=true]:top-0 data-[is-menu=true]:border-0 data-[is-menu=true]:shadow-md"
+        class="group max-md:hidden bg-white border-b border-primary transition-all z-50 min-w-full data-[is-menu=true]:fixed data-[is-menu=true]:top-0 data-[is-menu=true]:border-0 data-[is-menu=true]:shadow-md"
       >
         <div class="container">
           <div class="flex justify-between gap-10 items-center py-6 text-sm">
@@ -356,7 +356,9 @@
                 </svg>
               </a>
 
-              <div class="group-data-[is-menu=false]:hidden transition-all hover:text-red-600 cursor-pointer">
+              <div
+                class="group-data-[is-menu=false]:hidden transition-all hover:text-red-600 cursor-pointer"
+              >
                 <svg x="0px" y="0px" fill="currentColor" class="size-6">
                   <use href="/assets/icons.svg#icon-bar"></use>
                 </svg>
@@ -365,8 +367,8 @@
           </div>
 
           <div
-          data-is-open="true"
-          id="nav-menu"
+            data-is-open="true"
+            id="nav-menu"
             class="data-[is-open=false]:hidden flex items-center justify-between text-xs xl:text-sm"
           >
             <nav
@@ -426,7 +428,11 @@
 
       <!-- Mobile Menu -->
 
-      <div class="md:hidden bg-white">
+      <div
+        id="mobile-menu"
+        data-is-menu="false"
+        class="md:hidden w-full z-50 -top-20 transition-all data-[is-menu=true]:fixed data-[is-menu=true]:top-0 data-[is-menu=true]:shadow bg-white"
+      >
         <div class="container">
           <div class="flex justify-between items-center py-3">
             <div>
@@ -584,7 +590,6 @@
       </div>
     </header>
 
-    <!-- Main -->
     <main>
       <div class="container my-20">
         <!-- Favorite Brands -->
@@ -2278,7 +2283,6 @@
       </div>
     </main>
 
-    <!-- Footer -->
     <footer class="bg-primary-300 pt-20">
       <div class="container">
         <!-- Newsletter -->
@@ -2501,65 +2505,5 @@
 
     <!-- Overlay -->
     <div class="fixed top-0 bottom-0 w-full bg-black/50 z-40 hidden"></div>
-
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <script type="module">
-      const menu = document.querySelector("#menu");
-      const navMenu = document.querySelector("#nav-menu")
-      window.addEventListener("scroll", () => {
-        if(window.scrollY > 550) {
-           menu.dataset.isMenu = "true"
-           navMenu.dataset.isOpen = "false"
-        }else {
-          menu.dataset.isMenu = "false"
-          navMenu.dataset.isOpen = "true";
-        }
-        
-      })
-      const swiper = new Swiper(".swiper-items", {
-        loop: true,
-        dirction: "vertical",
-        slidesPerView: 2,
-
-        navigation: {
-          nextEl: "#swiper-button-next",
-          prevEl: "#swiper-button-prev",
-        },
-
-        breakpoints: {
-          600: {
-            slidesPerView: 3,
-          },
-
-          800: {
-            slidesPerView: 4,
-          },
-
-          1100: {
-            slidesPerView: 5,
-          },
-        },
-      });
-
-      const swiperBrands = new Swiper(".swiper-brands", {
-        loop: true,
-        dirction: "vertical",
-        slidesPerView: 2,
-
-        breakpoints: {
-          470: {
-            slidesPerView: 3,
-          },
-          650: {
-            slidesPerView: 4,
-          },
-
-          910: {
-            slidesPerView: 6,
-          },
-        },
-      });
-    </script>
   </body>
 </html>
