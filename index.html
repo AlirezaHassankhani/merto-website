@@ -141,7 +141,11 @@
         </div>
       </div>
 
-      <div class="max-md:hidden border-b border-primary">
+      <div
+        data-is-menu="false"
+        id="menu"
+        class="group max-md:hidden bg-white border-b border-primary -top-36 transition-all z-50 min-w-full data-[is-menu=true]:fixed data-[is-menu=true]:top-0 data-[is-menu=true]:border-0 data-[is-menu=true]:shadow-md"
+      >
         <div class="container">
           <div class="flex justify-between gap-10 items-center py-6 text-sm">
             <div class="shrink-0">
@@ -351,10 +355,20 @@
                   <use href="/assets/icons.svg#icon-cart"></use>
                 </svg>
               </a>
+
+              <div class="group-data-[is-menu=false]:hidden transition-all hover:text-red-600 cursor-pointer">
+                <svg x="0px" y="0px" fill="currentColor" class="size-6">
+                  <use href="/assets/icons.svg#icon-bar"></use>
+                </svg>
+              </div>
             </div>
           </div>
 
-          <div class="flex items-center justify-between text-xs xl:text-sm">
+          <div
+          data-is-open="true"
+          id="nav-menu"
+            class="data-[is-open=false]:hidden flex items-center justify-between text-xs xl:text-sm"
+          >
             <nav
               class="flex gap-8 [&>a]:py-2 [&>a]:border-red-600 [&>a]:transition-all [&>a:hover]:text-red-600 [&>a:hover]:border-b font-medium"
             >
@@ -2352,7 +2366,9 @@
               </div>
             </div>
 
-            <div class="flex max-lg:flex-wrap max-lg:gap-y-10 justify-between grow">
+            <div
+              class="flex max-lg:flex-wrap max-lg:gap-y-10 justify-between grow"
+            >
               <div class="flex flex-col gap-6 md:mr-28">
                 <p class="text-sm font-semibold">SHOP MORE</p>
 
@@ -2489,6 +2505,18 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
     <script type="module">
+      const menu = document.querySelector("#menu");
+      const navMenu = document.querySelector("#nav-menu")
+      window.addEventListener("scroll", () => {
+        if(window.scrollY > 550) {
+           menu.dataset.isMenu = "true"
+           navMenu.dataset.isOpen = "false"
+        }else {
+          menu.dataset.isMenu = "false"
+          navMenu.dataset.isOpen = "true";
+        }
+        
+      })
       const swiper = new Swiper(".swiper-items", {
         loop: true,
         dirction: "vertical",
