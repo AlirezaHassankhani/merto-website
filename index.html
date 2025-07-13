@@ -141,29 +141,31 @@
         </div>
       </div>
 
-      <div
-        data-is-menu="false"
-        id="menu"
-        class="group max-md:hidden bg-white border-b border-primary transition-all z-50 min-w-full data-[is-menu=true]:fixed data-[is-menu=true]:top-0 data-[is-menu=true]:border-0 data-[is-menu=true]:shadow-md"
-      >
-        <div class="container">
-          <div class="flex justify-between gap-10 items-center py-6 text-sm">
-            <div class="shrink-0">
-              <div class="inline-block">
-                <a href="#" class="max-w-fit">
-                  <img
-                    src="./assets/images/logo-cosmetic.png"
-                    alt="logo cosmetic"
-                    class="h-8 xl:h-10"
-                  />
-                </a>
+      <div class="max-md:hidden min-h-36">
+        <div
+          data-is-menu="false"
+          id="menu"
+          class="group bg-white border-b border-primary transition-all z-50 min-w-full data-[is-menu=true]:fixed data-[is-menu=true]:top-0 data-[is-menu=true]:border-0 data-[is-menu=true]:shadow-md"
+        >
+          <div class="container">
+            <div class="flex justify-between gap-10 items-center py-6 text-sm">
+              <div class="shrink-0">
+                <div class="inline-block">
+                  <a href="#" class="max-w-fit">
+                    <img
+                      src="./assets/images/logo-cosmetic.png"
+                      alt="logo cosmetic"
+                      class="h-8 xl:h-10"
+                    />
+                  </a>
+                </div>
               </div>
-            </div>
+  
+              <div
+                class="flex-1/2 bg-primary-200 flex justify-between rounded-md"
+              >
 
-            <div
-              class="flex-1/2 bg-primary-200 flex justify-between rounded-md"
-            >
-              <select name="term" class="py-2.5 pl-5">
+              <select name="term" class="max-w-32 px-1 outline-0">
                 <option value="">All Categories</option>
                 <option value="autopart">Autopart</option>
                 <option value="accessories-automotive">
@@ -299,128 +301,129 @@
                 <option value="xiaomi">&nbsp;&nbsp;&nbsp;Xiaomi</option>
                 <option value="tv-audio-video">TV, Audio - Video</option>
               </select>
-
-              <div class="flex items-center grow">
-                <input
-                  type="text"
-                  class="outline-none py-3.5 px-5 grow"
-                  placeholder="Search for products"
-                />
-
-                <button class="bg-red-600 p-2.5 cursor-pointer mr-1 rounded-md">
-                  <svg x="0px" y="0px" width="20" height="20" fill="#FFF">
-                    <use href="/assets/icons.svg#icon-search"></use>
-                  </svg>
-                </button>
+  
+                <div class="flex items-center grow">
+                  <input
+                    type="text"
+                    class="outline-none py-3.5 px-5 grow"
+                    placeholder="Search for products"
+                  />
+  
+                  <button class="bg-red-600 p-2.5 cursor-pointer mr-1 rounded-md">
+                    <svg x="0px" y="0px" width="20" height="20" fill="#FFF">
+                      <use href="/assets/icons.svg#icon-search"></use>
+                    </svg>
+                  </button>
+                </div>
               </div>
-            </div>
-
-            <div class="flex justify-between gap-4">
-              <a href="#">
-                <div
-                  class="flex items-center gap-2 font-semibold transition-all hover:text-red-600"
-                >
+  
+              <div class="flex justify-between gap-4">
+                <a href="#">
+                  <div
+                    class="flex items-center gap-2 font-semibold transition-all hover:text-red-600"
+                  >
+                    <svg
+                      fill="none"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-6"
+                    >
+                      <use href="assets/icons.svg#icon-user"></use>
+                    </svg>
+  
+                    <p class="max-xl:hidden">Account</p>
+                  </div>
+                </a>
+  
+                <a href="#" class="transition-all hover:text-red-600">
                   <svg
                     fill="none"
                     stroke-width="1.5"
                     stroke="currentColor"
                     class="size-6"
                   >
-                    <use href="assets/icons.svg#icon-user"></use>
+                    <use href="/assets/icons.svg#icon-like"></use>
                   </svg>
-
-                  <p class="max-xl:hidden">Account</p>
-                </div>
-              </a>
-
-              <a href="#" class="transition-all hover:text-red-600">
-                <svg
-                  fill="none"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="size-6"
-                >
-                  <use href="/assets/icons.svg#icon-like"></use>
-                </svg>
-              </a>
-
-              <a href="#" class="transition-all hover:text-red-600">
-                <svg
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="size-6"
-                >
-                  <use href="/assets/icons.svg#icon-cart"></use>
-                </svg>
-              </a>
-
-              <div
-                class="group-data-[is-menu=false]:hidden transition-all hover:text-red-600 cursor-pointer"
-              >
-                <svg x="0px" y="0px" fill="currentColor" class="size-6">
-                  <use href="/assets/icons.svg#icon-bar"></use>
-                </svg>
-              </div>
-            </div>
-          </div>
-
-          <div
-            data-is-open="true"
-            id="nav-menu"
-            class="data-[is-open=false]:hidden flex items-center justify-between text-xs xl:text-sm"
-          >
-            <nav
-              class="flex gap-8 [&>a]:py-2 [&>a]:border-red-600 [&>a]:transition-all [&>a:hover]:text-red-600 [&>a:hover]:border-b font-medium"
-            >
-              <a href="#">
-                <div class="flex items-center gap-1">
-                  Pages
-
+                </a>
+  
+                <a href="#" class="transition-all hover:text-red-600">
                   <svg
                     fill="none"
+                    viewBox="0 0 24 24"
                     stroke-width="1.5"
                     stroke="currentColor"
-                    class="size-2.5"
+                    class="size-6"
                   >
-                    <use href="/assets/icons.svg#icon-chevron"></use>
+                    <use href="/assets/icons.svg#icon-cart"></use>
+                  </svg>
+                </a>
+  
+                <div
+                  class="group-data-[is-menu=false]:hidden transition-all hover:text-red-600 cursor-pointer"
+                >
+                  <svg x="0px" y="0px" fill="currentColor" class="size-6">
+                    <use href="/assets/icons.svg#icon-bar"></use>
                   </svg>
                 </div>
-              </a>
-              <a href="#">Gift Guide</a>
-              <a href="#">Skincare</a>
-              <a href="#">Body & Bath</a>
-              <a href="#">Hair Care </a>
-              <a href="#">Makeup</a>
-              <a href="#">
-                <div class="flex items-center gap-1">
-                  <svg
-                    fill="none"
-                    stroke-width="1.5"
-                    class="size-6 stroke-red-600"
-                  >
-                    <use href="/assets/icons.svg#icon-ticket"></use>
-                  </svg>
-
-                  Best Discount
-                </div></a
-              >
-            </nav>
-
+              </div>
+            </div>
+  
             <div
-              class="max-xl:hidden flex items-center gap-2 cursor-pointer transition-all hover:text-red-600"
+              data-is-open="true"
+              id="nav-menu"
+              class="data-[is-open=false]:hidden flex items-center justify-between text-xs xl:text-sm"
             >
-              <p>Recently viewed</p>
-
-              <svg
-                fill="none"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="size-2.5"
+              <nav
+                class="flex gap-8 [&>a]:py-2 [&>a]:border-red-600 [&>a]:transition-all [&>a:hover]:text-red-600 [&>a:hover]:border-b font-medium"
               >
-                <use href="/assets/icons.svg#icon-chevron"></use>
-              </svg>
+                <a href="#">
+                  <div class="flex items-center gap-1">
+                    Pages
+  
+                    <svg
+                      fill="none"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-2.5"
+                    >
+                      <use href="/assets/icons.svg#icon-chevron"></use>
+                    </svg>
+                  </div>
+                </a>
+                <a href="#">Gift Guide</a>
+                <a href="#">Skincare</a>
+                <a href="#">Body & Bath</a>
+                <a href="#">Hair Care </a>
+                <a href="#">Makeup</a>
+                <a href="#">
+                  <div class="flex items-center gap-1">
+                    <svg
+                      fill="none"
+                      stroke-width="1.5"
+                      class="size-6 stroke-red-600"
+                    >
+                      <use href="/assets/icons.svg#icon-ticket"></use>
+                    </svg>
+  
+                    Best Discount
+                  </div></a
+                >
+              </nav>
+  
+              <div
+                class="max-xl:hidden flex items-center gap-2 cursor-pointer transition-all hover:text-red-600"
+              >
+                <p>Recently viewed</p>
+  
+                <svg
+                  fill="none"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-2.5"
+                >
+                  <use href="/assets/icons.svg#icon-chevron"></use>
+                </svg>
+              </div>
             </div>
           </div>
         </div>
@@ -428,44 +431,46 @@
 
       <!-- Mobile Menu -->
 
-      <div
-        id="mobile-menu"
-        data-is-menu="false"
-        class="md:hidden w-full z-50 -top-20 transition-all data-[is-menu=true]:fixed data-[is-menu=true]:top-0 data-[is-menu=true]:shadow bg-white"
-      >
-        <div class="container">
-          <div class="flex justify-between items-center py-3">
-            <div>
-              <svg x="0px" y="0px" width="30" height="30">
-                <use href="/assets/icons.svg#icon-bar"></use>
-              </svg>
-            </div>
-
-            <div>
-              <img
-                src="./assets/images/logo-cosmetic.png"
-                alt="logo"
-                class="max-sm:h-5 h-7"
-              />
-            </div>
-
-            <div class="flex items-center gap-4">
+      <div class="md:hidden min-h-14">
+        <div
+          id="mobile-menu"
+          data-is-menu="false"
+          class="w-full z-50 -top-20 transition-all data-[is-menu=true]:fixed data-[is-menu=true]:top-0 data-[is-menu=true]:shadow bg-white"
+        >
+          <div class="container">
+            <div class="flex justify-between items-center py-3">
               <div>
-                <svg x="0px" y="0px" width="20" height="20" fill="#000">
-                  <use href="/assets/icons.svg#icon-search"></use>
+                <svg x="0px" y="0px" width="30" height="30">
+                  <use href="/assets/icons.svg#icon-bar"></use>
                 </svg>
               </div>
-
+  
               <div>
-                <svg
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke-width="1.5"
-                  stroke="currentColor"
-                  class="size-6"
-                >
-                  <use href="/assets/icons.svg#icon-cart"></use>
-                </svg>
+                <img
+                  src="./assets/images/logo-cosmetic.png"
+                  alt="logo"
+                  class="max-sm:h-5 h-7"
+                />
+              </div>
+  
+              <div class="flex items-center gap-4">
+                <div>
+                  <svg x="0px" y="0px" width="20" height="20" fill="#000">
+                    <use href="/assets/icons.svg#icon-search"></use>
+                  </svg>
+                </div>
+  
+                <div>
+                  <svg
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <use href="/assets/icons.svg#icon-cart"></use>
+                  </svg>
+                </div>
               </div>
             </div>
           </div>
