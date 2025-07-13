@@ -2277,7 +2277,7 @@
             Get recommendations, tips, updates, promotions and more.
           </p>
 
-          <div class="flex bg-white max-w-1/2 mx-auto rounded-md p-1">
+          <div class="flex bg-white md:max-w-1/2 mx-auto rounded-md p-1">
             <input
               type="text"
               class="grow border-none outline-none text-sm px-4 py-3"
@@ -2302,8 +2302,8 @@
 
         <!-- Footer Body -->
         <section class="mb-20">
-          <div class="flex">
-            <div class="flex flex-col gap-6">
+          <div class="flex max-xl:flex-wrap max-xl:gap-y-10">
+            <div class="flex flex-col gap-5">
               <div>
                 <a href="#">
                   <img
@@ -2352,73 +2352,75 @@
               </div>
             </div>
 
-            <div class="flex flex-col gap-6 mr-28">
-              <p class="text-sm font-semibold">SHOP MORE</p>
+            <div class="flex max-lg:flex-wrap max-lg:gap-y-10 justify-between grow">
+              <div class="flex flex-col gap-6 md:mr-28">
+                <p class="text-sm font-semibold">SHOP MORE</p>
 
-              <div class="flex gap-14">
-                <ul
-                  class="space-y-4 text-sm [&>li>a]:transition-all [&>li>a:hover]:text-red-600"
-                >
-                  <li><a href="#">New Arrival</a></li>
-                  <li><a href="#">Sale off</a></li>
-                  <li><a href="#">Makeup Sets</a></li>
-                  <li><a href="#">Lipstick</a></li>
-                  <li><a href="#">Mascara</a></li>
-                </ul>
+                <div class="flex gap-8 md:gap-14">
+                  <ul
+                    class="space-y-4 text-sm [&>li>a]:transition-all [&>li>a:hover]:text-red-600"
+                  >
+                    <li><a href="#">New Arrival</a></li>
+                    <li><a href="#">Sale off</a></li>
+                    <li><a href="#">Makeup Sets</a></li>
+                    <li><a href="#">Lipstick</a></li>
+                    <li><a href="#">Mascara</a></li>
+                  </ul>
 
-                <ul
-                  class="space-y-4 text-sm [&>li>a]:transition-all [&>li>a:hover]:text-red-600"
-                >
-                  <li><a href="#">Nail Care</a></li>
-                  <li><a href="#">Lip Care</a></li>
-                  <li><a href="#">Body Care</a></li>
-                  <li><a href="#">Hair Care</a></li>
-                  <li><a href="#">Accessories</a></li>
-                </ul>
-              </div>
-            </div>
-
-            <div class="flex gap-28">
-              <div class="flex flex-col gap-6">
-                <p class="text-sm font-semibold">SHOPPING</p>
-
-                <ul
-                  class="space-y-4 text-sm [&>li>a]:transition-all [&>li>a:hover]:text-red-600"
-                >
-                  <li><a href="#">Wishlist</a></li>
-                  <li><a href="#">Shop by Brand</a></li>
-                  <li><a href="#">Offers</a></li>
-                  <li><a href="#">Track order</a></li>
-                  <li><a href="#">Size Guide</a></li>
-                </ul>
+                  <ul
+                    class="space-y-4 text-sm [&>li>a]:transition-all [&>li>a:hover]:text-red-600"
+                  >
+                    <li><a href="#">Nail Care</a></li>
+                    <li><a href="#">Lip Care</a></li>
+                    <li><a href="#">Body Care</a></li>
+                    <li><a href="#">Hair Care</a></li>
+                    <li><a href="#">Accessories</a></li>
+                  </ul>
+                </div>
               </div>
 
-              <div class="flex flex-col gap-6">
-                <p class="text-sm font-semibold">INFOMATION</p>
+              <div class="flex gap-2 md:gap-28">
+                <div class="flex flex-col gap-6">
+                  <p class="text-sm font-semibold">SHOPPING</p>
 
-                <ul
-                  class="space-y-4 text-sm [&>li>a]:transition-all [&>li>a:hover]:text-red-600"
-                >
-                  <li><a href="#">Track Order</a></li>
-                  <li><a href="#">Shipping & Returns</a></li>
-                  <li><a href="#">About us</a></li>
-                  <li><a href="#">Help</a></li>
-                  <li><a href="#">Gift Cards</a></li>
-                </ul>
-              </div>
+                  <ul
+                    class="space-y-4 text-sm [&>li>a]:transition-all [&>li>a:hover]:text-red-600"
+                  >
+                    <li><a href="#">Wishlist</a></li>
+                    <li><a href="#">Shop by Brand</a></li>
+                    <li><a href="#">Offers</a></li>
+                    <li><a href="#">Track order</a></li>
+                    <li><a href="#">Size Guide</a></li>
+                  </ul>
+                </div>
 
-              <div class="flex flex-col gap-6">
-                <p class="text-sm font-semibold">ACCOUNT</p>
+                <div class="flex flex-col gap-6">
+                  <p class="text-sm font-semibold">INFOMATION</p>
 
-                <ul
-                  class="space-y-4 text-sm [&>li>a]:transition-all [&>li>a:hover]:text-red-600"
-                >
-                  <li><a href="#">Cart</a></li>
-                  <li><a href="#">My account</a></li>
-                  <li><a href="#">My orders</a></li>
-                  <li><a href="#">Wishlist</a></li>
-                  <li><a href="#">Affiliate Program</a></li>
-                </ul>
+                  <ul
+                    class="space-y-4 text-sm [&>li>a]:transition-all [&>li>a:hover]:text-red-600"
+                  >
+                    <li><a href="#">Track Order</a></li>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Gift Cards</a></li>
+                  </ul>
+                </div>
+
+                <div class="flex flex-col gap-6">
+                  <p class="text-sm font-semibold">ACCOUNT</p>
+
+                  <ul
+                    class="space-y-4 text-sm [&>li>a]:transition-all [&>li>a:hover]:text-red-600"
+                  >
+                    <li><a href="#">Cart</a></li>
+                    <li><a href="#">My account</a></li>
+                    <li><a href="#">My orders</a></li>
+                    <li><a href="#">Wishlist</a></li>
+                    <li><a href="#">Affiliate Program</a></li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
@@ -2427,7 +2429,7 @@
         <!-- Copyright -->
         <section>
           <div
-            class="flex justify-between items-center border-t border-primary py-8"
+            class="flex max-md:flex-col gap-4 justify-between items-center border-t border-primary py-8"
           >
             <p class="text-xs text-primary-400 font-medium">
               Copyright © Merto. All Rights Reserved
@@ -2470,7 +2472,11 @@
             </ul>
 
             <div>
-              <img src="./assets/images/payment-icons-2.png" alt="payment" class="w-80">
+              <img
+                src="./assets/images/payment-icons-2.png"
+                alt="payment"
+                class="w-80"
+              />
             </div>
           </div>
         </section>
