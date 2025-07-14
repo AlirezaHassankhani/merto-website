@@ -1,16 +1,30 @@
 "use strict";
-const menu = document.querySelector("#menu");
-const navMenu = document.querySelector("#nav-menu");
-const mobileMenu = document.querySelector("#mobile-menu");
-window.addEventListener("scroll", () => {
-    if (window.scrollY > 550) {
-        menu.dataset.isMenu = "true";
-        navMenu.dataset.isOpen = "false";
-        mobileMenu.dataset.isMenu = "true";
+const $ = document;
+const computerMenuWrapper = $.querySelector("#computer-menu-wrapper");
+const computerMenu = $.querySelector("#computer-menu");
+const navMenuComputer = $.querySelector("#nav-menu-computer");
+const mobileMenu = $.querySelector("#mobile-menu");
+const menuComputerBar = $.querySelector("#menu-computer-bar");
+const observer = new IntersectionObserver((entries) => {
+    entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+            navMenuComputer.dataset.isOpen = "true";
+            computerMenu.dataset.isFloat = "false";
+            mobileMenu.dataset.isMenu = "false";
+        }
+        else {
+            navMenuComputer.dataset.isOpen = "false";
+            computerMenu.dataset.isFloat = "true";
+            mobileMenu.dataset.isMenu = "true";
+        }
+    });
+});
+observer.observe(computerMenuWrapper);
+menuComputerBar.addEventListener("click", () => {
+    if (navMenuComputer.dataset.isOpen == "true") {
+        navMenuComputer.dataset.isOpen = "false";
     }
     else {
-        menu.dataset.isMenu = "false";
-        navMenu.dataset.isOpen = "true";
-        mobileMenu.dataset.isMenu = "false";
+        navMenuComputer.dataset.isOpen = "true";
     }
 });

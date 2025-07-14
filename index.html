@@ -141,11 +141,11 @@
         </div>
       </div>
 
-      <div class="max-md:hidden min-h-36">
+      <div id="computer-menu-wrapper" class="max-md:hidden min-h-36">
         <div
-          data-is-menu="false"
-          id="menu"
-          class="group bg-white border-b border-primary transition-all z-50 min-w-full data-[is-menu=true]:fixed data-[is-menu=true]:top-0 data-[is-menu=true]:border-0 data-[is-menu=true]:shadow-md"
+          data-is-float="false"
+          id="computer-menu"
+          class="group bg-white border-b border-primary transition-all z-50 min-w-full data-[is-float=true]:fixed data-[is-float=true]:top-0 data-[is-menu=true]:border-0 data-[is-menu=true]:shadow-md"
         >
           <div class="container">
             <div class="flex justify-between gap-10 items-center py-6 text-sm">
@@ -359,7 +359,8 @@
                 </a>
   
                 <div
-                  class="group-data-[is-menu=false]:hidden transition-all hover:text-red-600 cursor-pointer"
+                  id="menu-computer-bar"
+                  class="group-data-[is-float=false]:hidden transition-all hover:text-red-600 cursor-pointer"
                 >
                   <svg x="0px" y="0px" fill="currentColor" class="size-6">
                     <use href="/assets/icons.svg#icon-bar"></use>
@@ -370,7 +371,7 @@
   
             <div
               data-is-open="true"
-              id="nav-menu"
+              id="nav-menu-computer"
               class="data-[is-open=false]:hidden flex items-center justify-between text-xs xl:text-sm"
             >
               <nav
@@ -2208,7 +2209,7 @@
         </section>
 
         <!-- Brands -->
-        <section class="mb-20">
+        <section>
           <div class="border border-primary rounded-md p-5">
             <div class="swiper-brands swiper">
               <div class="swiper-wrapper">
