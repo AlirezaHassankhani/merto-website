@@ -1,3 +1,44 @@
+const sliderOne = document.querySelector(".slider-cs-1");
+const sliderTwo = document.querySelector(".slider-cs-2");
+const sliderThree = document.querySelector(".slider-cs-3");
+
+
+let observerAnimation = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if(entry.isIntersecting) {
+      gsap.registerPlugin(SplitText)
+      let split = SplitText.create(".slider-cs-text1", { type: "words, chars" });
+      gsap.from(split.chars, {
+        duration: 1,
+        x: 100,
+        autoAlpha: 0,
+        stagger: 0.05
+      });
+      gsap.from(".slider-cs-text2", {
+        duration: 1,
+        rotateX: "90px",
+      })
+      gsap.from(".slider-cs-text3", {
+        duration: 1,
+        y: "100px",
+        opacity: 0
+      })
+      gsap.from(".slider-cs-3-img", {
+        y: "300px",
+        scale: "1.5",
+        opacity: "0",
+        duration: 1,
+      })
+    }
+  })
+}, {
+  threshold: 0.5
+})
+
+observerAnimation.observe(sliderOne);
+observerAnimation.observe(sliderTwo);
+observerAnimation.observe(sliderThree);
+
 const swiperItems = new Swiper(".swiper-items", {
     loop: true,
     dirction: "vertical",
@@ -41,3 +82,13 @@ const swiperItems = new Swiper(".swiper-items", {
       },
     },
   });
+
+  const swiperProduct = new Swiper('.swiper-product', {
+    slidesPerView: 1,
+    loop: true,
+    dirction: "vertical",
+    pagination: {
+      el: ".swiper-pagination",
+    },
+  })
+
