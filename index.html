@@ -374,7 +374,7 @@
                 </a>
 
                 <div
-                  id="menu-computer-bar"
+                  id="menu-computer-btn"
                   class="group-data-[is-float=false]:hidden transition-all hover:text-red-600 cursor-pointer"
                 >
                   <svg x="0px" y="0px" fill="currentColor" class="size-6">
@@ -449,13 +449,13 @@
 
       <div class="md:hidden min-h-14">
         <div
-          id="mobile-menu"
+          id="nav-mobile-menu"
           data-is-menu="false"
-          class="w-full z-50 -top-20 transition-all data-[is-menu=true]:fixed data-[is-menu=true]:top-0 data-[is-menu=true]:shadow bg-white"
+          class="w-full z-30 -top-20 transition-all data-[is-menu=true]:fixed data-[is-menu=true]:top-0 data-[is-menu=true]:shadow bg-white"
         >
           <div class="container">
             <div class="flex justify-between items-center py-3">
-              <div>
+              <div id="mobile-menu-btn">
                 <svg x="0px" y="0px" width="30" height="30">
                   <use href="/assets/icons.svg#icon-bar"></use>
                 </svg>
@@ -494,6 +494,7 @@
       </div>
 
       <div
+        id="mobile-menu"
         data-is-open="false"
         class="md:hidden transition-all fixed top-0 bottom-0 -left-80 z-50 w-xs bg-white text-sm data-[is-open='true']:left-0"
       >
@@ -508,7 +509,7 @@
             <p class="font-bold">MAIN MENU</p>
           </div>
 
-          <div class="bg-primary-200 p-4 group">
+          <div id="mobile-close-btn" class="bg-primary-200 p-4 group">
             <svg
               x="0px"
               y="0px"
@@ -2525,7 +2526,7 @@
     </footer>
 
     <!-- Overlay -->
-    <div class="fixed top-0 bottom-0 w-full bg-black/50 z-40 hidden"></div>
+    <div class="Overlay fixed top-0 bottom-0 w-full bg-black/50 z-40 hidden"></div>
 
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
