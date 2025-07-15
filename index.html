@@ -621,7 +621,7 @@
 
           <div class="grid grid-cols-2 md:grid-cols-4 gap-5 mb-20">
             <a href="#">
-              <div class="flex flex-col items-center group">
+              <div class="fav-brand-item flex flex-col items-center origin-center group">
                 <div class="relative">
                   <img
                     src="./assets/images/cosmetic-brand-1.png"
@@ -639,7 +639,7 @@
             </a>
 
             <a href="#">
-              <div class="flex flex-col items-center group">
+              <div class="fav-brand-item flex flex-col items-center origin-center group">
                 <div class="relative">
                   <img
                     src="./assets/images/cosmetic-brand-2.png"
@@ -656,7 +656,7 @@
             </a>
 
             <a href="#">
-              <div class="flex flex-col items-center group">
+              <div class="fav-brand-item flex flex-col items-center origin-center group">
                 <div class="relative">
                   <img
                     src="./assets/images/cosmetic-brand-3.png"
@@ -673,7 +673,7 @@
             </a>
 
             <a href="#">
-              <div class="flex flex-col items-center group">
+              <div class="fav-brand-item flex flex-col items-center origin-center group">
                 <div class="relative">
                   <img
                     src="./assets/images/cosmetic-brand-4.png"
@@ -2534,12 +2534,22 @@
       document.addEventListener("DOMContentLoaded", (event) => {
         gsap.registerPlugin(ScrollTrigger);
 
+        gsap.from(".fav-brand-item", {
+          scrollTrigger: {
+            trigger: ".fav-brand-item",
+          },
+          scale: "0",
+          opacity: "0",
+          duration: 1,
+        })
+
         gsap.from(".category", {
           scrollTrigger: {
             trigger: ".category",
           },
           clipPath: "inset(0 50% 0 50%)",
-          duration: 2,
+          opacity: "0",
+          duration: 1,
           ease: "power2.out"
         });
       });
