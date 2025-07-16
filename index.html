@@ -10,9 +10,13 @@
     <link rel="stylesheet" href="./css/swiper-bundle.css" />
     <link rel="stylesheet" href="./css/style.css" />
 
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js" defer></script>
+
     <script src="./js/swiper-bundle.js" defer></script>
     <script src="./js/app.js" defer></script>
-    <script src="./js/main.js" defer></script>
+    <script src="./js/index.js" defer></script>
     <script src="./js/homeSlider.js" defer></script>
     <title>merto</title>
   </head>
@@ -334,22 +338,19 @@
               </div>
 
               <div class="flex justify-between gap-4">
-                <a href="#">
-                  <div
-                    class="flex items-center gap-2 font-semibold transition-all hover:text-red-600"
+                <button class="login-btn flex items-center gap-2 font-semibold cursor-pointer transition-all hover:text-red-600"
+                >
+                  <svg
+                    fill="none"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
                   >
-                    <svg
-                      fill="none"
-                      stroke-width="1.5"
-                      stroke="currentColor"
-                      class="size-6"
-                    >
-                      <use href="assets/icons.svg#icon-user"></use>
-                    </svg>
+                    <use href="assets/icons.svg#icon-user"></use>
+                  </svg>
 
-                    <p class="max-xl:hidden">Account</p>
-                  </div>
-                </a>
+                  <p class="max-xl:hidden">Account</p>
+                </button>
 
                 <a href="#" class="transition-all hover:text-red-600">
                   <svg
@@ -386,9 +387,9 @@
             </div>
 
             <div
-              data-is-open="true"
+              data-is-sub="true"
               id="nav-menu-computer"
-              class="data-[is-open=false]:hidden flex items-center justify-between text-xs xl:text-sm"
+              class="data-[is-sub=false]:hidden flex items-center justify-between text-xs xl:text-sm"
             >
               <nav
                 class="flex gap-8 [&>a]:py-2 [&>a]:border-red-600 [&>a]:transition-all [&>a:hover]:text-red-600 [&>a:hover]:border-b font-medium"
@@ -615,7 +616,9 @@
 
     <main>
       <section class="mb-20">
-        <div class="swiper-product swiper h-[250px] sm:h-[300px] md:h-[400px] lg:h-[450px] xl:h-[600px]">
+        <div
+          class="swiper-product swiper h-[250px] sm:h-[300px] md:h-[400px] lg:h-[450px] xl:h-[600px]"
+        >
           <div class="swiper-wrapper">
             <div class="swiper-slide slider-cs-1">
               <a href="#">
@@ -625,22 +628,28 @@
                   <div
                     class="absolute top-1/2 left-1/2 -translate-1/2 text-center"
                   >
-                      <p class="slider-cs-text1 text-[2.6vw] text-white font-damion mb-1">
-                        luxury cosmetics
-                      </p>
-                      <div class="perspective-midrange">
-                        <h1 class="slider-cs-text2 font-bold text-[5vw] text-white leading-tight mb-2 origin-center inline-block">
-                          Big Sale<br />Up to 50
-                        </h1>
-                      </div>
-                      <p class="slider-cs-text3 font-medium text-[2.2vw] text-white md:text-sm mb-5">
-                        Limited time offer - Only Selected items
-                      </p>
-                      <button
-                        class="bg-white font-semibold text-xs md:text-sm rounded-md transition-all hover:bg-red-600 hover:text-white py-1 md:py-3 px-4 md:px-6 cursor-pointer"
+                    <p
+                      class="slider-cs-text1 text-[2.6vw] text-white font-damion mb-1"
+                    >
+                      luxury cosmetics
+                    </p>
+                    <div class="perspective-midrange">
+                      <h1
+                        class="slider-cs-text2 font-bold text-[5vw] text-white leading-tight mb-2 origin-center inline-block"
                       >
-                        SHOP NOW
-                      </button>
+                        Big Sale<br />Up to 50
+                      </h1>
+                    </div>
+                    <p
+                      class="slider-cs-text3 font-medium text-[2.2vw] text-white md:text-sm mb-5"
+                    >
+                      Limited time offer - Only Selected items
+                    </p>
+                    <button
+                      class="bg-white font-semibold text-xs md:text-sm rounded-md transition-all hover:bg-red-600 hover:text-white py-1 md:py-3 px-4 md:px-6 cursor-pointer"
+                    >
+                      SHOP NOW
+                    </button>
                   </div>
                 </div>
               </a>
@@ -654,27 +663,33 @@
                   <div
                     class="absolute top-1/2 left-10 -translate-y-1/2 text-center"
                   >
-                      <p class="slider-cs-text1 text-[2.6vw] text-white font-damion mb-1">
-                        New arrivals
-                      </p>
-                      <div class="perspective-midrange">
-                        <h1 class="slider-cs-text2 font-bold text-[5vw] text-white leading-tight mb-2 origin-center inline-block">
-                          M.A.C<br />Eyeshadow
-                        </h1>
-                      </div>
-                      <p class="slider-cs-text3 font-medium text-[2.2vw] text-white md:text-sm mb-5">
-                        Long-wearing, 8 hours & Non-creasing
-                      </p>
-                      <button
-                        class="bg-white font-semibold text-xs md:text-sm rounded-md transition-all hover:bg-red-600 hover:text-white py-1 md:py-3 px-4 md:px-6 cursor-pointer"
+                    <p
+                      class="slider-cs-text1 text-[2.6vw] text-white font-damion mb-1"
+                    >
+                      New arrivals
+                    </p>
+                    <div class="perspective-midrange">
+                      <h1
+                        class="slider-cs-text2 font-bold text-[5vw] text-white leading-tight mb-2 origin-center inline-block"
                       >
-                        SHOP NOW
-                      </button>
+                        M.A.C<br />Eyeshadow
+                      </h1>
+                    </div>
+                    <p
+                      class="slider-cs-text3 font-medium text-[2.2vw] text-white md:text-sm mb-5"
+                    >
+                      Long-wearing, 8 hours & Non-creasing
+                    </p>
+                    <button
+                      class="bg-white font-semibold text-xs md:text-sm rounded-md transition-all hover:bg-red-600 hover:text-white py-1 md:py-3 px-4 md:px-6 cursor-pointer"
+                    >
+                      SHOP NOW
+                    </button>
                   </div>
                 </div>
               </a>
             </div>
-            
+
             <div class="swiper-slide slider-cs-3">
               <a href="#">
                 <div
@@ -691,22 +706,26 @@
                   <div
                     class="absolute top-1/2 left-1/2 -translate-1/2 text-center"
                   >
-                      <p class="slider-cs-text1 text-[2.6vw] font-damion mb-1">
-                        New arrivals
-                      </p>
-                      <div class="perspective-midrange">
-                        <h1 class="slider-cs-text2 font-bold text-[5vw] leading-tight mb-2 origin-center inline-block">
-                          L'Oreal<br />Professional
-                        </h1>
-                      </div>
-                      <p class="slider-cs-text3 font-medium text-[2.2vw] md:text-sm mb-4">
-                        Color protection for up to 8 weeks*
-                      </p>
-                      <button
-                        class="bg-black text-white font-semibold text-xs md:text-sm rounded-md transition-all hover:bg-red-600 py-1 md:py-3 px-4 md:px-6 cursor-pointer"
+                    <p class="slider-cs-text1 text-[2.6vw] font-damion mb-1">
+                      New arrivals
+                    </p>
+                    <div class="perspective-midrange">
+                      <h1
+                        class="slider-cs-text2 font-bold text-[5vw] leading-tight mb-2 origin-center inline-block"
                       >
-                        SHOP NOW
-                      </button>
+                        L'Oreal<br />Professional
+                      </h1>
+                    </div>
+                    <p
+                      class="slider-cs-text3 font-medium text-[2.2vw] md:text-sm mb-4"
+                    >
+                      Color protection for up to 8 weeks*
+                    </p>
+                    <button
+                      class="bg-black text-white font-semibold text-xs md:text-sm rounded-md transition-all hover:bg-red-600 py-1 md:py-3 px-4 md:px-6 cursor-pointer"
+                    >
+                      SHOP NOW
+                    </button>
                   </div>
                 </div>
               </a>
@@ -2641,34 +2660,5 @@
     <div
       class="Overlay fixed top-0 bottom-0 w-full bg-black/50 z-40 hidden"
     ></div>
-
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", (event) => {
-        gsap.registerPlugin(ScrollTrigger);
-
-        gsap.from(".fav-brand-item", {
-          scrollTrigger: {
-            trigger: ".fav-brand-item",
-          },
-          scale: "0",
-          opacity: "0",
-          duration: 1,
-        });
-
-        gsap.from(".category", {
-          scrollTrigger: {
-            trigger: ".category",
-          },
-          clipPath: "inset(0 50% 0 50%)",
-          opacity: "0",
-          duration: 1,
-          ease: "power2.out",
-        });
-      });
-    </script>
   </body>
 </html>
