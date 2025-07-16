@@ -150,7 +150,7 @@
         <div
           data-is-float="false"
           id="computer-menu"
-          class="group bg-white border-b border-primary transition-all z-50 min-w-full data-[is-float=true]:fixed data-[is-float=true]:top-0 data-[is-menu=true]:border-0 data-[is-menu=true]:shadow-md"
+          class="group bg-white border-b border-primary transition-all z-30 min-w-full data-[is-float=true]:fixed data-[is-float=true]:top-0 data-[is-menu=true]:border-0 data-[is-menu=true]:shadow-md"
         >
           <div class="container">
             <div class="flex justify-between gap-10 items-center py-6 text-sm">
@@ -2656,6 +2656,58 @@
       </div>
     </footer>
 
+    <!-- Modules -->
+     <div
+     id="login-module"
+     data-is-open="false"
+     class="data-[is-open=false]:hidden fixed z-50 top-1/2 left-1/2 -translate-1/2 bg-white w-11/12 lg:w-9/12 xl:w-3/5 grid md:grid-cols-2">
+      <div class="max-md:hidden">
+        <img src="./assets/images/login-banner.jpg" alt="login banner" class="w-full h-full object-cover">
+      </div>
+
+      <div class="flex flex-col justify-between">
+        <div class="flex justify-end">
+          <button id="close-login-btn" class="bg-black rounded-bl-md p-1 cursor-pointer transition-all duration-300 hover:bg-red-600">
+            <svg x="0px" y="0px" class="size-5 fill-white">
+              <use href="/assets/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+        </div>
+
+        <div class="flex flex-col gap-4 px-12">
+          <h3 class="font-semibold text-xl text-center">Login</h3>
+
+          <div>
+            <input type="text" class="bg-primary-100 w-full text-xs p-4 rounded-md outline-none font-medium" placeholder="Username or email address*">
+          </div>
+
+          <div>
+            <input type="text" class="bg-primary-100 w-full text-xs p-4 rounded-md outline-none font-medium" placeholder="Password*">
+          </div>
+
+          <div class="flex justify-between items-center text-primary-400 text-xs font-normal">
+            <div class="flex items-center gap-1">
+              <input type="checkbox" name="Remember">
+              <label for="Remember">Remember me</label>
+            </div>
+            
+            <a href="#">
+              Forget Password?
+            </a>
+          </div>
+
+          <button class="bg-black text-white transition-all duration-300 hover:bg-red-600 py-3 font-semibold text-sm rounded-md cursor-pointer">LOG IN</button>
+        </div>
+
+        <div class="flex max-sm:flex-wrap justify-center items-center gap-2 border-t border-primary py-3 px-5 text-xs font-normal">
+          <p class="text-primary-400">You dont have an account yet?</p>
+
+          <a href="#">
+            Register Now
+          </a>
+        </div>
+      </div>
+     </div>
     <!-- Overlay -->
     <div
       class="Overlay fixed top-0 bottom-0 w-full bg-black/50 z-40 hidden"

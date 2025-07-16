@@ -10,6 +10,8 @@ const menuComputerBtn = $.querySelector("#menu-computer-btn");
 const mobileMenuBtn = $.querySelector("#mobile-menu-btn");
 const mobileCloseBtn = $.querySelector("#mobile-close-btn");
 const loginBtn = $.querySelector(".login-btn");
+const loginModule = $.querySelector("#login-module");
+const closeLoginBtn = $.querySelector("#close-login-btn");
 const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
         if (entry.isIntersecting) {
@@ -57,3 +59,10 @@ mobileMenuBtn?.addEventListener("click", () => {
     }
 });
 mobileCloseBtn?.addEventListener("click", overlayClose);
+loginBtn?.addEventListener("click", () => {
+    overlayOpen();
+    if (loginModule instanceof HTMLElement) {
+        loginModule.dataset.isOpen = "true";
+    }
+});
+closeLoginBtn?.addEventListener("click", overlayClose);

@@ -90,5 +90,8 @@ const swiperItems = new Swiper(".swiper-items", {
     pagination: {
       el: ".swiper-pagination",
     },
+    autoplay: {
+      delay: 4000
+    },
   })
 
