@@ -25,7 +25,6 @@ class Flatrov {
         this.option = option;
         this.assignThumbnails();
         this.changeImage(gallery[0].id);
-        this.assignImageContainer();
     }
     changeImage(ID) {
         let currentImage = this.flatrov
@@ -46,17 +45,6 @@ class Flatrov {
             imageWrapper.src = target.image;
         }
     }
-    assignImageContainer() {
-        let activeElem = this.flatrov
-            .querySelector(".flatrov-thumbnails")
-            ?.querySelector("[data-is-active=true]");
-        let imageCurrent = new Image();
-        if (activeElem instanceof HTMLDivElement) {
-            let { image } = this.gallery.find((item) => item.id == activeElem.dataset.id);
-            imageCurrent.src = image;
-        }
-        this.flatrov.querySelector(".flatrov-wrapper")?.append(imageCurrent);
-    }
     assignThumbnails() {
         const container = document.createDocumentFragment();
         const target = this.flatrov.querySelector(".flatrov-thumbnails");
@@ -74,6 +62,7 @@ class Flatrov {
         div.classList.add("thumbnail-image");
         div.dataset.isActive = "false";
         div.dataset.id = ID;
+        div.classList.add("size-25");
         // Create Image Thumbnail
         let img = new Image();
         img.src = src;
