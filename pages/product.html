@@ -821,28 +821,17 @@
         <section>
           <div class="container">
             <div
-              class="tabs flex gap-4 font-semibold text-2xl border-b border-primary-400 divide-x divide-primary-400 mb-10"
+              class="tabs flex flex-wrap gap-y-4 gap-1 font-semibold text-sm sm:text-lg md:text-xl lg:text-2xl mb-10"
             >
-              <div data-is-selected="true" data-id="1" class="tab group pr-4">
-                <p
-                  class="py-4 cursor-pointer group-data-[is-selected=true]:border-b group-data-[is-selected=false]:text-primary-400"
-                >
-                  Description
-                </p>
+              <div data-is-selected="true" data-id="1" class="tab group pr-4 data-[is-selected=false]:text-primary-400 cursor-pointer">
+                Description
               </div>
-              <div data-is-selected="false" data-id="2" class="tab group pr-4">
-                <p
-                  class="py-4 cursor-pointer group-data-[is-selected=true]:border-b group-data-[is-selected=false]:text-primary-400"
-                >
-                  Specifications
-                </p>
+
+              <div data-is-selected="false" data-id="2" class="tab group pr-4 data-[is-selected=false]:text-primary-400 cursor-pointer">
+                Specifications
               </div>
-              <div data-is-selected="false" data-id="3" class="tab group">
-                <p
-                  class="py-4 cursor-pointer group-data-[is-selected=true]:border-b group-data-[is-selected=false]:text-primary-400"
-                >
-                  Reviews (2)
-                </p>
+              <div data-is-selected="false" data-id="3" class="tab group pr-4 data-[is-selected=false]:text-primary-400 cursor-pointer">
+                Reviews (2)
               </div>
             </div>
 
@@ -862,19 +851,19 @@
               <div class="tab-content" data-id="2">
                 <ul class="rounded-md overflow-hidden outline outline-primary">
                   <li class="flex p-4 text-sm bg-primary-100">
-                    <span class="font-semibold w-1/5 min-w-52">Scent</span>
+                    <span class="font-semibold w-1/5 min-w-32">Scent</span>
                     <span>Unscented</span>
                   </li>
 
                   <li class="flex p-4 text-sm bg-white">
-                    <span class="font-semibold w-1/5 min-w-52"
+                    <span class="font-semibold w-1/5 min-w-32"
                       >Sun Protection Factor</span
                     >
                     <span>50 Sun Protection Factor (SPF)</span>
                   </li>
 
                   <li class="flex p-4 text-sm bg-primary-100">
-                    <span class="font-semibold w-1/5 min-w-52"
+                    <span class="font-semibold w-1/5 min-w-32"
                       >Product Benefits</span
                     >
                     <span
@@ -885,7 +874,7 @@
                   </li>
 
                   <li class="flex p-4 text-sm bg-white">
-                    <span class="font-semibold w-1/5 min-w-52">Skin Type</span>
+                    <span class="font-semibold w-1/5 min-w-32">Skin Type</span>
                     <span
                       >Can be applied to wet or dry skin and is formulated for
                       all types of physical activity and skin types</span
@@ -893,7 +882,7 @@
                   </li>
 
                   <li class="flex p-4 text-sm bg-primary-100">
-                    <span class="font-semibold w-1/5 min-w-52">Additional</span>
+                    <span class="font-semibold w-1/5 min-w-32">Additional</span>
                     <span
                       >Sweat resistant sunscreen protects your skin for up to 80
                       minutes in the water</span
@@ -901,7 +890,7 @@
                   </li>
 
                   <li class="flex p-4 text-sm bg-white">
-                    <span class="font-semibold w-1/5 min-w-52">Ingredient</span>
+                    <span class="font-semibold w-1/5 min-w-32">Ingredient</span>
                     <span>
                       Full body sunscreen is made with Zinc Oxide and is
                       paraben-free and noncomedogenic</span
@@ -909,7 +898,7 @@
                   </li>
 
                   <li class="flex p-4 text-sm bg-primary-100">
-                    <span class="font-semibold w-1/5 min-w-52"
+                    <span class="font-semibold w-1/5 min-w-32"
                       >Item Weight</span
                     >
                     <span>3 Ounces</span>
@@ -959,7 +948,7 @@
                           <use href="/assets/icons.svg#icon-star"></use>
                         </svg>
                       </div>
-                      <div class="w-72 h-1 rounded-md bg-black"></div>
+                      <div class="w-12 md:w-72 h-1 rounded-md bg-black"></div>
                       <span class="text-sm">2</span>
                     </div>
 
@@ -970,7 +959,7 @@
                           <use href="/assets/icons.svg#icon-star"></use>
                         </svg>
                       </div>
-                      <div class="w-72 h-1 rounded-md bg-primary"></div>
+                      <div class="w-12 md:w-72 h-1 rounded-md bg-primary"></div>
                       <span class="text-sm">0</span>
                     </div>
 
@@ -981,7 +970,7 @@
                           <use href="/assets/icons.svg#icon-star"></use>
                         </svg>
                       </div>
-                      <div class="w-72 h-1 rounded-md bg-primary"></div>
+                      <div class="w-12 md:w-72 h-1 rounded-md bg-primary"></div>
                       <span class="text-sm">0</span>
                     </div>
 
@@ -992,7 +981,7 @@
                           <use href="/assets/icons.svg#icon-star"></use>
                         </svg>
                       </div>
-                      <div class="w-72 h-1 rounded-md bg-primary"></div>
+                      <div class="w-12 md:w-72 h-1 rounded-md bg-primary"></div>
                       <span class="text-sm">0</span>
                     </div>
 
@@ -1003,14 +992,14 @@
                           <use href="/assets/icons.svg#icon-star"></use>
                         </svg>
                       </div>
-                      <div class="w-72 h-1 rounded-md bg-primary"></div>
+                      <div class="w-12 md:w-72 h-1 rounded-md bg-primary"></div>
                       <span class="text-sm">0</span>
                     </div>
                   </div>
                 </div>
 
                 <div class="divide-y divide-primary space-y-10">
-                  <div class="flex gap-14 pb-10">
+                  <div class="flex max-lg:flex-wrap gap-14 pb-10">
                     <div class="flex gap-4 shrink-0">
                       <div>
                         <img
@@ -1078,7 +1067,7 @@
                     </div>
                   </div>
 
-                  <div class="flex gap-14 pb-10">
+                  <div class="flex max-lg:flex-wrap gap-14 pb-10">
                     <div class="flex gap-4 shrink-0">
                       <div>
                         <img
@@ -1146,7 +1135,7 @@
                   </div>
                 </div>
 
-                <div class="flex flex-col gap-8 bg-primary-100 rounded-md p-14">
+                <div class="flex flex-col gap-8 bg-primary-100 rounded-md p-4 md:p-14">
                   <div class="flex flex-col gap-6">
                     <h2 class="text-2xl font-semibold">Add a review</h2>
                     <p class="text-sm font-normal">
@@ -1196,7 +1185,7 @@
                       </div>
                     </div>
 
-                    <div class="flex items-center gap-4">
+                    <div class="flex flex-wrap items-center gap-4">
                       <p class="text-sm font-normal">
                         Choose pictures (maxsize: 50kB, max files: 2)
                       </p>
@@ -1213,7 +1202,7 @@
                   </div>
 
                   <div>
-                    <div class="flex gap-4 mb-4">
+                    <div class="flex max-sm:flex-wrap gap-4 mb-4">
                       <div class="flex-1/2">
                         <label for="name" class="text-sm mb-1.5 inline-block"
                           >Name <span class="text-red-400">*</span></label
