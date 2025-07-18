@@ -334,7 +334,8 @@
               </div>
 
               <div class="flex justify-between gap-4">
-                <button class="login-btn flex items-center gap-2 font-semibold cursor-pointer transition-all hover:text-red-600"
+                <button
+                  class="login-btn flex items-center gap-2 font-semibold cursor-pointer transition-all hover:text-red-600"
                 >
                   <svg
                     fill="none"
@@ -612,159 +613,303 @@
 
     <main>
       <div class="container my-20">
-        <section>
-          <div class="flex gap-10">
+        <section class="mb-20">
+          <div class="flex max-lg:flex-wrap gap-10">
             <div class="flex-3/5">
-              <div class="gallery-1 flatrov">
-                <div class="flatrov-thumbnails">
-                </div>
+              <div class="flatrov">
+                <div class="flatrov-thumbnails"></div>
 
                 <div class="flatrov-wrapper">
-                  <img src="" alt="image product">
-                </div>     
+                  <img src="" alt="image product" />
+                </div>
               </div>
             </div>
 
-            <div class="flex-2/5">
+            <div class="flex-2/5 shrink-0">
               <div class="flex flex-col gap-2 mb-10">
-                <p class="text-primary-400 text-sm font-medium">Maybelline New York</p>
-                <h2 class="text-3xl font-semibold">Allure Luminous Intense Lipstick 0.15oz</h2>
+                <p class="text-primary-400 text-sm font-medium">
+                  Maybelline New York
+                </p>
+                <h2 class="text-xl md:text-3xl font-semibold">
+                  Allure Luminous Intense Lipstick 0.15oz
+                </h2>
 
                 <div class="flex items-center gap-1">
                   <div class="flex">
                     <svg fill="currentColor" class="size-4 text-amber-300">
                       <use href="/assets/icons.svg#icon-star"></use>
                     </svg>
-  
+
                     <svg fill="currentColor" class="size-4 text-amber-300">
                       <use href="/assets/icons.svg#icon-star"></use>
                     </svg>
-  
+
                     <svg fill="currentColor" class="size-4 text-amber-300">
                       <use href="/assets/icons.svg#icon-star"></use>
                     </svg>
-                    
+
                     <svg fill="currentColor" class="size-4 text-amber-300">
                       <use href="/assets/icons.svg#icon-star"></use>
                     </svg>
-  
+
                     <svg fill="currentColor" class="size-4">
                       <use href="/assets/icons.svg#icon-star"></use>
                     </svg>
                   </div>
 
-                  <p class="text-primary-400 text-sm font-normal">4.00 (2 Reviews)</p>
+                  <p class="text-primary-400 text-sm font-normal">
+                    4.00 (2 Reviews)
+                  </p>
                 </div>
 
-                <div class="flex justify-between items-center">
-                  <div class="flex items-center gap-2">
+                <div
+                  class="flex max-xl:flex-wrap gap-4 justify-between items-center"
+                >
+                  <div class="flex items-center shrink-0 gap-2">
                     <p class="text-2xl font-medium">$20</p>
                     <p class="text-xl text-primary-400 line-through">$24</p>
                     <p class="text-sm text-red-400">(Save $4)</p>
                   </div>
 
                   <div class="flex items-center gap-1 text-red-400">
-                    <div class="bg-red-400 py-1.5 px-4 rounded-md text-white text-sm font-semibold">12</div>
+                    <div
+                      class="bg-red-400 py-1.5 px-4 rounded-md text-white text-sm font-semibold"
+                    >
+                      12
+                    </div>
                     :
-                    <div class="bg-red-400 py-1.5 px-4 rounded-md text-white text-sm font-semibold">02</div>
+                    <div
+                      class="bg-red-400 py-1.5 px-4 rounded-md text-white text-sm font-semibold"
+                    >
+                      02
+                    </div>
                     :
-                    <div class="bg-red-400 py-1.5 px-4 rounded-md text-white text-sm font-semibold">25</div>
+                    <div
+                      class="bg-red-400 py-1.5 px-4 rounded-md text-white text-sm font-semibold"
+                    >
+                      25
+                    </div>
                     :
-                    <div class="bg-red-400 py-1.5 px-4 rounded-md text-white text-sm font-semibold">31</div>
+                    <div
+                      class="bg-red-400 py-1.5 px-4 rounded-md text-white text-sm font-semibold"
+                    >
+                      31
+                    </div>
                   </div>
                 </div>
               </div>
 
               <div class="mb-6">
-                <div class="flex justify-between gap-1.5 mb-5">
-                  <div class="flex-1/6 flex items-center justify-between bg-primary-100 rounded-md px-2.5">
+                <div
+                  class="max-sm:fixed max-sm:p-2.5 max-sm:shadow-lg bottom-0 right-0 left-0 max-sm:bg-white flex justify-between gap-1.5 sm:mb-5"
+                >
+                  <div
+                    class="flex-1/6 flex items-center justify-between bg-primary-100 rounded-md px-2.5"
+                  >
                     <button class="cursor-pointer">-</button>
                     <p>1</p>
                     <button class="cursor-pointer">+</button>
                   </div>
-  
-                  <button class="flex-3/6 bg-black text-white rounded-md flex justify-center py-3 items-center gap-2 text-sm border border-black cursor-pointer transition-all duration-300 hover:bg-white hover:text-black font-medium">
+
+                  <button
+                    class="flex-3/6 bg-black text-white rounded-md flex justify-center py-3 items-center gap-2 text-sm border border-black cursor-pointer transition-all duration-300 hover:bg-white hover:text-black font-medium"
+                  >
                     <svg x="0px" y="0px" class="size-3" fill="currentColor">
                       <use href="/assets/icons.svg#icon-plus"></use>
                     </svg>
-  
+
                     <p class="uppercase">add to cart</p>
                   </button>
-  
-                  <button class="flrx-2/6 bg-red-600 text-white rounded-md text-sm border border-red-600 uppercase cursor-pointer transition-all duration-300 hover:bg-white hover:text-red-600 font-medium px-2.5">buy now</button>
+
+                  <button
+                    class="flrx-2/6 bg-red-600 text-white rounded-md text-sm border border-red-600 uppercase cursor-pointer transition-all duration-300 hover:bg-white hover:text-red-600 font-medium px-2.5"
+                  >
+                    buy now
+                  </button>
                 </div>
 
-                <button class="flex items-center gap-0.5 text-primary-400 cursor-pointer transition-all hover:text-red-600">
-                 <svg fill="none" stroke-width="1.5" stroke="currentColor" class="size-4">
-                   <use href="/assets/icons.svg#icon-like"></use>
-                 </svg>
-   
-                 <p class="text-xs">Add to wishlist</p>
+                <button
+                  class="flex items-center gap-0.5 text-primary-400 cursor-pointer transition-all hover:text-red-600"
+                >
+                  <svg
+                    fill="none"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-4"
+                  >
+                    <use href="/assets/icons.svg#icon-like"></use>
+                  </svg>
+
+                  <p class="text-xs">Add to wishlist</p>
                 </button>
               </div>
 
-             <div class="mb-6">
-              <p class="text-sm font-semibold mb-2.5">Special offer</p>
+              <div class="mb-6">
+                <p class="text-sm font-semibold mb-2.5">Special offer</p>
 
-              <div class="border border-black rounded-md py-2.5 px-5 text-xs font-medium">
-                <div class="mb-2">
-                  <p>10% off, maximum $20 when paying with PAYPAL</p>
-                </div>
+                <div
+                  class="border border-black rounded-md py-2.5 px-5 text-xs font-medium"
+                >
+                  <div class="mb-2">
+                    <p>10% off, maximum $20 when paying with PAYPAL</p>
+                  </div>
 
-                <div>
-                  <p>50% off or More iPad Cases, Covers & Keyboard Folios</p>
-                </div>
-              </div>
-             </div>
-
-             <div class="flex flex-col gap-2.5 text-sm">
-              <div class="flex gap-2">
-                <span class="text-primary-400">SKU:</span>
-                <p class="font-medium">6WS33IRMN4</p>
-              </div>
-
-              <div class="flex gap-2">
-                <span class="text-primary-400">Categories: </span>
-                <div>
-                  <a href="#" class="transition-all hover:text-red-600">Lipstick</a>,
-                  <a href="#" class="transition-all hover:text-red-600">Makeup</a>
+                  <div>
+                    <p>50% off or More iPad Cases, Covers & Keyboard Folios</p>
+                  </div>
                 </div>
               </div>
 
-              <ul class="flex gap-4 [&>li>a>svg]:transition-all [&>li>a>svg:hover]:fill-red-600">
-                <li>
-                  <a href="#">
-                    <svg x="0px" y="0px" class="size-5">
-                      <use href="/assets/icons.svg#icon-facebook"></use>
-                    </svg>
-                  </a>
-                </li>
-  
-                <li>
-                  <a href="#">
-                    <svg x="0px" y="0px" class="size-5">
-                      <use href="/assets/icons.svg#icon-tiktok"></use>
-                    </svg>
-                  </a>
-                </li>
-  
-                <li>
-                  <a href="#">
-                    <svg x="0px" y="0px" class="size-5">
-                      <use href="/assets/icons.svg#icon-instagram"></use>
-                    </svg>
-                  </a>
-                </li>
-  
-                <li>
-                  <a href="#">
-                    <svg x="0px" y="0px" class="size-5">
-                      <use href="/assets/icons.svg#icon-xtwitter"></use>
-                    </svg>
-                  </a>
-                </li>
-              </ul>
-             </div>
+              <div class="flex flex-col gap-2.5 text-sm">
+                <div class="flex gap-2">
+                  <span class="text-primary-400">SKU:</span>
+                  <p class="font-medium">6WS33IRMN4</p>
+                </div>
+
+                <div class="flex gap-2">
+                  <span class="text-primary-400">Categories: </span>
+                  <div>
+                    <a href="#" class="transition-all hover:text-red-600"
+                      >Lipstick</a
+                    >,
+                    <a href="#" class="transition-all hover:text-red-600"
+                      >Makeup</a
+                    >
+                  </div>
+                </div>
+
+                <ul
+                  class="flex gap-4 [&>li>a>svg]:transition-all [&>li>a>svg:hover]:fill-red-600"
+                >
+                  <li>
+                    <a href="#">
+                      <svg x="0px" y="0px" class="size-5">
+                        <use href="/assets/icons.svg#icon-facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#">
+                      <svg x="0px" y="0px" class="size-5">
+                        <use href="/assets/icons.svg#icon-tiktok"></use>
+                      </svg>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#">
+                      <svg x="0px" y="0px" class="size-5">
+                        <use href="/assets/icons.svg#icon-instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+
+                  <li>
+                    <a href="#">
+                      <svg x="0px" y="0px" class="size-5">
+                        <use href="/assets/icons.svg#icon-xtwitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <div class="container">
+            <div
+              class="tabs flex gap-4 font-semibold text-2xl border-b border-primary-400 divide-x divide-primary-400 mb-10"
+            >
+              <div data-is-selected="true" data-id="1" class="tab group pr-4">
+                <p
+                  class="py-4 cursor-pointer group-data-[is-selected=true]:border-b group-data-[is-selected=false]:text-primary-400"
+                >
+                  Description
+                </p>
+              </div>
+              <div data-is-selected="false" data-id="2" class="tab group pr-4">
+                <p
+                  class="py-4 cursor-pointer group-data-[is-selected=true]:border-b group-data-[is-selected=false]:text-primary-400"
+                >
+                  Specifications
+                </p>
+              </div>
+              <div data-is-selected="false" data-id="3" class="tab group">
+                <p
+                  class="py-4 cursor-pointer group-data-[is-selected=true]:border-b group-data-[is-selected=false]:text-primary-400"
+                >
+                  Reviews (2)
+                </p>
+              </div>
+            </div>
+
+            <div class="tab-container">
+              <div class="tab-content" data-id="1">
+                <p class="text-sm font-medium">
+                  Compellingly grow performance based mindshare through parallel
+                  potentialities. Rapidiously underwhelm top-line catalysts for
+                  change before best-of-breed materials. Competently brand
+                  timely catalysts for change through sustainable systems.
+                  Completely expedite ubiquitous bandwidth after integrated
+                  action items. Progressively transform leading-edge supply
+                  chains whereas flexible niche markets.
+                </p>
+              </div>
+
+              <div class="tab-content" data-id="2">
+                <ul class="rounded-md overflow-hidden outline outline-primary">
+                  <li class="flex p-4 text-sm bg-primary-100">
+                    <span class="font-semibold w-1/5 min-w-52">Scent</span>
+                    <span>Unscented</span>
+                  </li>
+
+                  <li class="flex p-4 text-sm bg-white">
+                    <span class="font-semibold w-1/5 min-w-52">Sun Protection Factor</span>
+                    <span>50 Sun Protection Factor (SPF)</span>
+                  </li>
+
+                  <li class="flex p-4 text-sm bg-primary-100">
+                    <span class="font-semibold w-1/5 min-w-52">Product Benefits</span>
+                    <span>EltaMD UV Sport Face and Body Sunscreen provides all-around sun protection so you can enjoy the outdoors</span>
+                  </li>
+
+                  <li class="flex p-4 text-sm bg-white">
+                    <span class="font-semibold w-1/5 min-w-52">Skin Type</span>
+                    <span>Can be applied to wet or dry skin and is formulated for all types of physical activity and skin types</span>
+                  </li>
+
+                  <li class="flex p-4 text-sm bg-primary-100">
+                    <span class="font-semibold w-1/5 min-w-52">Additional</span>
+                    <span>Sweat resistant sunscreen protects your skin for up to 80 minutes in the water</span>
+                  </li>
+
+                  <li class="flex p-4 text-sm bg-white">
+                    <span class="font-semibold w-1/5 min-w-52">Ingredient</span>
+                    <span>
+                      Full body sunscreen is made with Zinc Oxide and is paraben-free and noncomedogenic</span>
+                  </li>
+
+                  <li class="flex p-4 text-sm bg-primary-100">
+                    <span class="font-semibold w-1/5 min-w-52">Item Weight</span>
+                    <span>3 Ounces</span>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="tab-content" data-id="3">
+                <p class="text-sm font-medium">
+                  Compellingly grow performance based mindshare through parallel
+                  potentialities. Rapidiously underwhelm top-line catalysts for
+                  change before best-of-breed materials. Competently brand
+                  timely catalysts for change through sustainable systems.
+                  Completely expedite ubiquitous bandwidth after integrated
+                  action items. Progressively transform leading-edge supply
+                  chains whereas flexible niche markets.
+                </p>
+              </div>
             </div>
           </div>
         </section>
@@ -993,60 +1138,109 @@
 
     <!-- Modules -->
     <div
-    id="login-module"
-    data-is-open="false"
-    class="data-[is-open=false]:hidden fixed z-50 top-1/2 left-1/2 -translate-1/2 bg-white w-11/12 lg:w-9/12 xl:w-3/5 grid md:grid-cols-2">
-     <div class="max-md:hidden">
-       <img src="../assets/images/login-banner.jpg" alt="login banner" class="w-full h-full object-cover">
-     </div>
+      id="login-module"
+      data-is-open="false"
+      class="data-[is-open=false]:hidden fixed z-50 top-1/2 left-1/2 -translate-1/2 bg-white w-11/12 lg:w-9/12 xl:w-3/5 grid md:grid-cols-2"
+    >
+      <div class="max-md:hidden">
+        <img
+          src="../assets/images/login-banner.jpg"
+          alt="login banner"
+          class="w-full h-full object-cover"
+        />
+      </div>
 
-     <div class="flex flex-col justify-between">
-       <div class="flex justify-end">
-         <button id="close-login-btn" class="bg-black rounded-bl-md p-1 cursor-pointer transition-all duration-300 hover:bg-red-600">
-           <svg x="0px" y="0px" class="size-5 fill-white">
-             <use href="/assets/icons.svg#icon-close"></use>
-           </svg>
-         </button>
-       </div>
+      <div class="flex flex-col justify-between">
+        <div class="flex justify-end">
+          <button
+            id="close-login-btn"
+            class="bg-black rounded-bl-md p-1 cursor-pointer transition-all duration-300 hover:bg-red-600"
+          >
+            <svg x="0px" y="0px" class="size-5 fill-white">
+              <use href="/assets/icons.svg#icon-close"></use>
+            </svg>
+          </button>
+        </div>
 
-       <div class="flex flex-col gap-4 px-12">
-         <h3 class="font-semibold text-xl text-center">Login</h3>
+        <div class="flex flex-col gap-4 px-12">
+          <h3 class="font-semibold text-xl text-center">Login</h3>
 
-         <div>
-           <input type="text" class="bg-primary-100 w-full text-xs p-4 rounded-md outline-none font-medium" placeholder="Username or email address*">
-         </div>
+          <div>
+            <input
+              type="text"
+              class="bg-primary-100 w-full text-xs p-4 rounded-md outline-none font-medium"
+              placeholder="Username or email address*"
+            />
+          </div>
 
-         <div>
-           <input type="text" class="bg-primary-100 w-full text-xs p-4 rounded-md outline-none font-medium" placeholder="Password*">
-         </div>
+          <div>
+            <input
+              type="text"
+              class="bg-primary-100 w-full text-xs p-4 rounded-md outline-none font-medium"
+              placeholder="Password*"
+            />
+          </div>
 
-         <div class="flex justify-between items-center text-primary-400 text-xs font-normal">
-           <div class="flex items-center gap-1">
-             <input type="checkbox" name="Remember">
-             <label for="Remember">Remember me</label>
-           </div>
-           
-           <a href="#">
-             Forget Password?
-           </a>
-         </div>
+          <div
+            class="flex justify-between items-center text-primary-400 text-xs font-normal"
+          >
+            <div class="flex items-center gap-1">
+              <input type="checkbox" name="Remember" />
+              <label for="Remember">Remember me</label>
+            </div>
 
-         <button class="bg-black text-white transition-all duration-300 hover:bg-red-600 py-3 font-semibold text-sm rounded-md cursor-pointer">LOG IN</button>
-       </div>
+            <a href="#"> Forget Password? </a>
+          </div>
 
-       <div class="flex max-sm:flex-wrap justify-center items-center gap-2 border-t border-primary py-3 px-5 text-xs font-normal">
-         <p class="text-primary-400">You dont have an account yet?</p>
+          <button
+            class="bg-black text-white transition-all duration-300 hover:bg-red-600 py-3 font-semibold text-sm rounded-md cursor-pointer"
+          >
+            LOG IN
+          </button>
+        </div>
 
-         <a href="#">
-           Register Now
-         </a>
-       </div>
-     </div>
+        <div
+          class="flex max-sm:flex-wrap justify-center items-center gap-2 border-t border-primary py-3 px-5 text-xs font-normal"
+        >
+          <p class="text-primary-400">You dont have an account yet?</p>
+
+          <a href="#"> Register Now </a>
+        </div>
+      </div>
     </div>
     <!-- Overlay -->
     <div
       class="Overlay fixed top-0 bottom-0 w-full bg-black/50 z-40 hidden"
     ></div>
 
+    <script>
+      const tabs = document.querySelectorAll(".tab");
+      const tabContainer = document.querySelector(".tab-container");
+      const tabsContent = tabContainer.querySelectorAll(".tab-content");
+
+      document.addEventListener("DOMContentLoaded", () =>
+        assignTabContainer("1")
+      );
+
+      tabs.forEach((tab) => {
+        tab.addEventListener("click", function () {
+          disableAllTabs();
+          assignTabContainer(this.dataset.id);
+          this.dataset.isSelected = "true";
+        });
+      });
+
+      function disableAllTabs() {
+        tabs.forEach((tab) => (tab.dataset.isSelected = "false"));
+      }
+
+      function assignTabContainer(id) {
+        tabContainer.innerHTML = "";
+        let nextContent = Array.from(tabsContent).find(
+          (tabContent) => tabContent.dataset.id == id
+        );
+        tabContainer.append(nextContent);
+      }
+    </script>
   </body>
 </html>

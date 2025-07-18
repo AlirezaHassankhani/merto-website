@@ -62,7 +62,7 @@ class Flatrov {
         div.classList.add("thumbnail-image");
         div.dataset.isActive = "false";
         div.dataset.id = ID;
-        div.classList.add("size-25");
+        div.classList.add(...["size-18", "md:size-25"]);
         // Create Image Thumbnail
         let img = new Image();
         img.src = src;
@@ -98,4 +98,4 @@ let gallery = [
         alt: "cosmetics",
     },
 ];
-let flatrov = new Flatrov(".gallery-1", gallery);
+let flatrov = new Flatrov(".flatrov", gallery);
