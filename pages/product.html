@@ -9,10 +9,904 @@
     />
     <link rel="stylesheet" href="../css/swiper-bundle.css" />
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="../css/flatrov.css" />
 
     <script src="../js/swiper-bundle.js" defer></script>
+    <script src="../js/flatrov.js" defer></script>
     <script src="../js/app.js" defer></script>
     <title>Product</title>
   </head>
-  <body></body>
+  <body>
+    <header>
+      <div class="max-md:hidden border-b border-primary">
+        <div class="container">
+          <div class="flex justify-between items-center text-xs py-2.5">
+            <div class="flex gap-4">
+              <div class="flex gap-4">
+                <div class="relative group">
+                  <div
+                    class="flex items-center gap-1 transition-all hover:text-red-600 cursor-pointer"
+                  >
+                    <p>English</p>
+
+                    <svg
+                      fill="none"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-2.5"
+                    >
+                      <use href="../assets/icons.svg#icon-chevron"></use>
+                    </svg>
+                  </div>
+
+                  <ul
+                    class="transition-all duration-300 group-hover:visible group-hover:scale-100 scale-0 invisible absolute top-5 -left-8 bg-white p-8 shadow-lg rounded-md space-y-4"
+                  >
+                    <li>
+                      <div class="cursor-pointer group/item w-16">
+                        <p class="group-hover/item:text-red-600">Persian</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="relative group">
+                  <div
+                    class="flex items-center gap-1 cursor-pointer transition-all hover:text-red-600"
+                  >
+                    <p>USD</p>
+
+                    <svg
+                      fill="none"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-2.5"
+                    >
+                      <use href="../assets/icons.svg#icon-chevron"></use>
+                    </svg>
+                  </div>
+
+                  <ul
+                    class="transition-all duration-300 group-hover:visible group-hover:scale-100 scale-0 invisible absolute top-5 -left-8 bg-white p-8 shadow-lg rounded-md space-y-4"
+                  >
+                    <li>
+                      <div class="cursor-pointer group/item w-16">
+                        <p class="group-hover/item:text-red-600">IRR</p>
+                      </div>
+                    </li>
+                    <li>
+                      <div class="cursor-pointer group/item w-16">
+                        <p class="group-hover/item:text-red-600">BTC</p>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+
+              <nav
+                class="max-lg:hidden border-l pl-4 border-primary flex gap-4 [&>a]:transition-all [&>a:hover]:text-red-600"
+              >
+                <a href="#">Track Order</a>
+                <a href="#">Contact</a>
+                <a href="#">FAQs</a>
+              </nav>
+            </div>
+
+            <div class="flex gap-4">
+              <ul
+                class="flex gap-4 [&>li>a>svg]:transition-all [&>li>a>svg:hover]:fill-red-600"
+              >
+                <li>
+                  <a href="#">
+                    <svg x="0px" y="0px" width="15" height="15">
+                      <use href="/assets/icons.svg#icon-facebook"></use>
+                    </svg>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <svg x="0px" y="0px" width="15" height="15">
+                      <use href="/assets/icons.svg#icon-tiktok"></use>
+                    </svg>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <svg x="0px" y="0px" width="15" height="15">
+                      <use href="/assets/icons.svg#icon-instagram"></use>
+                    </svg>
+                  </a>
+                </li>
+
+                <li>
+                  <a href="#">
+                    <svg x="0px" y="0px" width="15" height="15">
+                      <use href="/assets/icons.svg#icon-xtwitter"></use>
+                    </svg>
+                  </a>
+                </li>
+              </ul>
+
+              <div
+                class="border-l border-primary pl-4 transition-all hover:text-red-600"
+              >
+                <a href="#">
+                  Contact us 24/7
+                  <span class="font-semibold ml-2">(+92) 3842 7879</span>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="computer-menu-wrapper" class="max-md:hidden min-h-[136.8px]">
+        <div
+          data-is-float="false"
+          id="computer-menu"
+          class="group bg-white border-b border-primary transition-all z-30 min-w-full data-[is-float=true]:fixed data-[is-float=true]:top-0 data-[is-menu=true]:border-0 data-[is-menu=true]:shadow-md"
+        >
+          <div class="container">
+            <div class="flex justify-between gap-10 items-center py-6 text-sm">
+              <div class="shrink-0">
+                <div class="inline-block">
+                  <a href="#" class="max-w-fit">
+                    <img
+                      src="../assets/images/logo-cosmetic.png"
+                      alt="logo cosmetic"
+                      class="h-8 xl:h-10"
+                    />
+                  </a>
+                </div>
+              </div>
+
+              <div
+                class="flex-1/2 bg-primary-200 flex justify-between rounded-md"
+              >
+                <select name="term" class="max-w-32 px-1 outline-0">
+                  <option value="">All Categories</option>
+                  <option value="autopart">Autopart</option>
+                  <option value="accessories-automotive">
+                    &nbsp;&nbsp;&nbsp;Accessories
+                  </option>
+                  <option value="car-care">&nbsp;&nbsp;&nbsp;Car Care</option>
+                  <option value="car-electronics">
+                    &nbsp;&nbsp;&nbsp;Car Electronics
+                  </option>
+                  <option value="equipment">&nbsp;&nbsp;&nbsp;Equipment</option>
+                  <option value="lights">&nbsp;&nbsp;&nbsp;Lights</option>
+                  <option value="oils-fluids">
+                    &nbsp;&nbsp;&nbsp;Oils &amp; Fluids
+                  </option>
+                  <option value="tires">&nbsp;&nbsp;&nbsp;Tires</option>
+                  <option value="wheels">&nbsp;&nbsp;&nbsp;Wheels</option>
+                  <option value="beauty-health">Beauty &amp; Health</option>
+                  <option value="bags-cases">
+                    &nbsp;&nbsp;&nbsp;Bags &amp; Cases
+                  </option>
+                  <option value="bb-creams">&nbsp;&nbsp;&nbsp;BB Creams</option>
+                  <option value="body-bath">
+                    &nbsp;&nbsp;&nbsp;Body &amp; Bath
+                  </option>
+                  <option value="brushes-tools">
+                    &nbsp;&nbsp;&nbsp;Brushes &amp; Tools
+                  </option>
+                  <option value="hair-care">&nbsp;&nbsp;&nbsp;Hair Care</option>
+                  <option value="lipstick">&nbsp;&nbsp;&nbsp;Lipstick</option>
+                  <option value="makeup">&nbsp;&nbsp;&nbsp;Makeup</option>
+                  <option value="makeup-palettes">
+                    &nbsp;&nbsp;&nbsp;Makeup Palettes
+                  </option>
+                  <option value="mascara">&nbsp;&nbsp;&nbsp;Mascara</option>
+                  <option value="mask">&nbsp;&nbsp;&nbsp;Mask</option>
+                  <option value="nail-care">&nbsp;&nbsp;&nbsp;Nail Care</option>
+                  <option value="skincare">&nbsp;&nbsp;&nbsp;Skincare</option>
+                  <option value="toner">&nbsp;&nbsp;&nbsp;Toner</option>
+                  <option value="electronic">Electronic</option>
+                  <option value="product-cat-apple">
+                    &nbsp;&nbsp;&nbsp;Apple
+                  </option>
+                  <option value="camera">&nbsp;&nbsp;&nbsp;Camera</option>
+                  <option value="controller">
+                    &nbsp;&nbsp;&nbsp;Controller
+                  </option>
+                  <option value="headphones">
+                    &nbsp;&nbsp;&nbsp;Headphones
+                  </option>
+                  <option value="smartwatch">
+                    &nbsp;&nbsp;&nbsp;Smartwatch
+                  </option>
+                  <option value="speaker">&nbsp;&nbsp;&nbsp;Speaker</option>
+                  <option value="fashion">Fashion</option>
+                  <option value="men">&nbsp;&nbsp;&nbsp;Men</option>
+                  <option value="men-accessories">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Accessories
+                  </option>
+                  <option value="hoodies">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Hoodies
+                  </option>
+                  <option value="jackets-coats">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Jackets &amp; Coats
+                  </option>
+                  <option value="polo-shirts">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Polo shirts
+                  </option>
+                  <option value="shirts-men">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shirts
+                  </option>
+                  <option value="shoes-men">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shoes
+                  </option>
+                  <option value="women">&nbsp;&nbsp;&nbsp;Women</option>
+                  <option value="women-accessories">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Accessories
+                  </option>
+                  <option value="dress">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Dress
+                  </option>
+                  <option value="shirts">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shirts
+                  </option>
+                  <option value="shoes">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shoes
+                  </option>
+                  <option value="shorts">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Shorts
+                  </option>
+                  <option value="skirts">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Skirts
+                  </option>
+                  <option value="tops">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Tops
+                  </option>
+                  <option value="game-accessories">Game Accessories</option>
+                  <option value="home-decor">Home &amp; Decor</option>
+                  <option value="beds">&nbsp;&nbsp;&nbsp;Beds</option>
+                  <option value="bookcase">&nbsp;&nbsp;&nbsp;Bookcase</option>
+                  <option value="cabinets">&nbsp;&nbsp;&nbsp;Cabinets</option>
+                  <option value="chairs">&nbsp;&nbsp;&nbsp;Chairs</option>
+                  <option value="fireplaces">
+                    &nbsp;&nbsp;&nbsp;Fireplaces
+                  </option>
+                  <option value="lighting">&nbsp;&nbsp;&nbsp;Lighting</option>
+                  <option value="mirrors-clocks">
+                    &nbsp;&nbsp;&nbsp;Mirrors &amp; Clocks
+                  </option>
+                  <option value="office-furniture">
+                    &nbsp;&nbsp;&nbsp;Office Furniture
+                  </option>
+                  <option value="outdoor">&nbsp;&nbsp;&nbsp;Outdoor</option>
+                  <option value="rugs">&nbsp;&nbsp;&nbsp;Rugs</option>
+                  <option value="sectionals">
+                    &nbsp;&nbsp;&nbsp;Sectionals
+                  </option>
+                  <option value="sofas">&nbsp;&nbsp;&nbsp;Sofas</option>
+                  <option value="tables">&nbsp;&nbsp;&nbsp;Tables</option>
+                  <option value="wall-decor">
+                    &nbsp;&nbsp;&nbsp;Wall Decor
+                  </option>
+                  <option value="laptop-computer">Laptop &amp; Computer</option>
+                  <option value="computer">&nbsp;&nbsp;&nbsp;Computer</option>
+                  <option value="all-in-one">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All in One
+                  </option>
+                  <option value="laptop">&nbsp;&nbsp;&nbsp;Laptop</option>
+                  <option value="macbook">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Macbook
+                  </option>
+                  <option value="msi">
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MSI
+                  </option>
+                  <option value="phone-tablet">Phone &amp; Tablet</option>
+                  <option value="tablet-accessories">
+                    &nbsp;&nbsp;&nbsp;Accessories
+                  </option>
+                  <option value="apple">&nbsp;&nbsp;&nbsp;Apple</option>
+                  <option value="huawei">&nbsp;&nbsp;&nbsp;Huawei</option>
+                  <option value="oppo">&nbsp;&nbsp;&nbsp;Oppo</option>
+                  <option value="realme">&nbsp;&nbsp;&nbsp;Realme</option>
+                  <option value="samsung">&nbsp;&nbsp;&nbsp;Samsung</option>
+                  <option value="smartphone">
+                    &nbsp;&nbsp;&nbsp;Smartphone
+                  </option>
+                  <option value="tablet">&nbsp;&nbsp;&nbsp;Tablet</option>
+                  <option value="xiaomi">&nbsp;&nbsp;&nbsp;Xiaomi</option>
+                  <option value="tv-audio-video">TV, Audio - Video</option>
+                </select>
+
+                <div class="flex items-center grow">
+                  <input
+                    type="text"
+                    class="outline-none py-3.5 px-5 grow"
+                    placeholder="Search for products"
+                  />
+
+                  <button
+                    class="bg-red-600 p-2.5 cursor-pointer mr-1 rounded-md"
+                  >
+                    <svg x="0px" y="0px" width="20" height="20" fill="#FFF">
+                      <use href="/assets/icons.svg#icon-search"></use>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+
+              <div class="flex justify-between gap-4">
+                <button class="login-btn flex items-center gap-2 font-semibold cursor-pointer transition-all hover:text-red-600"
+                >
+                  <svg
+                    fill="none"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <use href="/assets/icons.svg#icon-user"></use>
+                  </svg>
+
+                  <p class="max-xl:hidden">Account</p>
+                </button>
+
+                <a href="#" class="transition-all hover:text-red-600">
+                  <svg
+                    fill="none"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <use href="/assets/icons.svg#icon-like"></use>
+                  </svg>
+                </a>
+
+                <a href="#" class="transition-all hover:text-red-600">
+                  <svg
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <use href="/assets/icons.svg#icon-cart"></use>
+                  </svg>
+                </a>
+
+                <div
+                  id="menu-computer-btn"
+                  class="group-data-[is-float=false]:hidden transition-all hover:text-red-600 cursor-pointer"
+                >
+                  <svg x="0px" y="0px" fill="currentColor" class="size-6">
+                    <use href="/assets/icons.svg#icon-bar"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+
+            <div
+              data-is-sub="true"
+              id="nav-menu-computer"
+              class="data-[is-sub=false]:hidden flex items-center justify-between text-xs xl:text-sm"
+            >
+              <nav
+                class="flex gap-8 [&>a]:py-2 [&>a]:border-red-600 [&>a]:transition-all [&>a:hover]:text-red-600 [&>a:hover]:border-b font-medium"
+              >
+                <a href="#">
+                  <div class="flex items-center gap-1">
+                    Pages
+
+                    <svg
+                      fill="none"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      class="size-2.5"
+                    >
+                      <use href="/assets/icons.svg#icon-chevron"></use>
+                    </svg>
+                  </div>
+                </a>
+                <a href="#">Gift Guide</a>
+                <a href="#">Skincare</a>
+                <a href="#">Body & Bath</a>
+                <a href="#">Hair Care </a>
+                <a href="#">Makeup</a>
+                <a href="#">
+                  <div class="flex items-center gap-1">
+                    <svg
+                      fill="none"
+                      stroke-width="1.5"
+                      class="size-6 stroke-red-600"
+                    >
+                      <use href="/assets/icons.svg#icon-ticket"></use>
+                    </svg>
+
+                    Best Discount
+                  </div></a
+                >
+              </nav>
+
+              <div
+                class="max-xl:hidden flex items-center gap-2 cursor-pointer transition-all hover:text-red-600"
+              >
+                <p>Recently viewed</p>
+
+                <svg
+                  fill="none"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-2.5"
+                >
+                  <use href="/assets/icons.svg#icon-chevron"></use>
+                </svg>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Mobile Menu -->
+
+      <div class="md:hidden min-h-14">
+        <div
+          id="nav-mobile-menu"
+          data-is-menu="false"
+          class="w-full z-30 -top-20 transition-all data-[is-menu=true]:fixed data-[is-menu=true]:top-0 data-[is-menu=true]:shadow bg-white"
+        >
+          <div class="container">
+            <div class="flex justify-between items-center py-3">
+              <div id="mobile-menu-btn">
+                <svg x="0px" y="0px" width="30" height="30">
+                  <use href="/assets/icons.svg#icon-bar"></use>
+                </svg>
+              </div>
+
+              <div>
+                <img
+                  src="../assets/images/logo-cosmetic.png"
+                  alt="logo"
+                  class="max-sm:h-5 h-7"
+                />
+              </div>
+
+              <div class="flex items-center gap-4">
+                <div>
+                  <svg x="0px" y="0px" width="20" height="20" fill="#000">
+                    <use href="/assets/icons.svg#icon-search"></use>
+                  </svg>
+                </div>
+
+                <div>
+                  <svg
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="1.5"
+                    stroke="currentColor"
+                    class="size-6"
+                  >
+                    <use href="/assets/icons.svg#icon-cart"></use>
+                  </svg>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        id="mobile-menu"
+        data-is-open="false"
+        class="md:hidden transition-all fixed top-0 bottom-0 -left-80 z-50 w-xs bg-white text-sm data-[is-open='true']:left-0"
+      >
+        <div class="flex">
+          <div
+            class="grow bg-black text-white flex justify-center items-center gap-1"
+          >
+            <svg x="0px" y="0px" fill="#FFF" class="size-5">
+              <use href="/assets/icons.svg#icon-bar"></use>
+            </svg>
+
+            <p class="font-bold">MAIN MENU</p>
+          </div>
+
+          <div id="mobile-close-btn" class="bg-primary-200 p-4 group">
+            <svg
+              x="0px"
+              y="0px"
+              width="20"
+              height="20"
+              class="transition-all group-hover:fill-red-600"
+            >
+              <use href="/assets/icons.svg#icon-close"></use>
+            </svg>
+          </div>
+        </div>
+
+        <div class="flex flex-col gap-6 p-5">
+          <nav class="flex flex-col gap-4 font-medium">
+            <a href="#">
+              <div class="flex justify-between items-center">
+                <p>Pages</p>
+
+                <svg x="0px" y="0px" class="size-3">
+                  <use href="/assets/icons.svg#icon-plus"></use>
+                </svg>
+              </div>
+            </a>
+            <a href="#">Gift Guide</a>
+            <a href="#">Skincare</a>
+            <a href="#">Body & Bath</a>
+            <a href="#">Hair Care </a>
+            <a href="#">Makeup</a>
+            <a href="#">
+              <div class="flex items-center gap-1">
+                <svg
+                  fill="none"
+                  stroke-width="1.5"
+                  class="size-6 stroke-red-600"
+                >
+                  <use href="/assets/icons.svg#icon-ticket"></use>
+                </svg>
+
+                Best Discount
+              </div>
+            </a>
+
+            <a href="#">
+              <div class="flex justify-between items-center">
+                <p class="text-primary-400 font-normal">Recently viewed</p>
+
+                <svg x="0px" y="0px" class="size-3">
+                  <use href="/assets/icons.svg#icon-plus"></use>
+                </svg>
+              </div>
+            </a>
+          </nav>
+
+          <div
+            class="border-y border-primary-200 flex flex-col gap-3 text-primary-400 py-4"
+          >
+            <a href="#">
+              <div class="flex items-center gap-2">
+                <svg
+                  fill="none"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-5"
+                >
+                  <use href="/assets/icons.svg#icon-like"></use>
+                </svg>
+
+                <p>Wishlist (0)</p>
+              </div>
+            </a>
+
+            <a href="#">
+              <div class="flex items-center gap-2">
+                <svg
+                  fill="none"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-5"
+                >
+                  <use href="/assets/icons.svg#icon-user"></use>
+                </svg>
+
+                <p>Account</p>
+              </div>
+            </a>
+          </div>
+
+          <div class="flex gap-4 font-normal">
+            <div class="cursor-pointer underline">English</div>
+
+            <div class="cursor-pointer">Persian</div>
+          </div>
+
+          <div class="flex gap-4 font-normal">
+            <div class="cursor-pointer underline">USD</div>
+
+            <div class="cursor-pointer">IRR</div>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <div class="container my-20">
+        <section>
+          <div class="flex">
+            <div>
+              <div class="gallery-1 flatrov">
+                <div class="flatrov-wrapper">
+                  <img src="" alt="image product">
+                </div>
+
+                <div class="flatrov-thumbnails">
+                </div>
+              </div>
+            </div>
+
+            <div></div>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="bg-primary-300 pt-20">
+      <div class="container">
+        <!-- Newsletter -->
+        <section class="mb-20">
+          <h3 class="text-2xl text-center font-semibold tracking-wide mb-4">
+            Join our newsletter
+          </h3>
+
+          <p class="text-xs text-center mb-6">
+            Get recommendations, tips, updates, promotions and more.
+          </p>
+
+          <div class="flex bg-white md:max-w-1/2 mx-auto rounded-md p-1">
+            <input
+              type="text"
+              class="grow border-none outline-none text-sm px-4 py-3"
+              placeholder="enter your email address"
+              name="newsletter"
+            />
+
+            <div
+              class="px-4 py-3 cursor-pointer transition-all hover:text-red-600"
+            >
+              <svg
+                fill="none"
+                stroke-width="1.5"
+                stroke="currentColor"
+                class="size-4"
+              >
+                <use href="/assets/icons.svg#icon-arrow-right"></use>
+              </svg>
+            </div>
+          </div>
+        </section>
+
+        <!-- Footer Body -->
+        <section class="mb-20">
+          <div class="flex max-xl:flex-wrap max-xl:gap-y-10">
+            <div class="flex flex-col gap-5">
+              <div>
+                <a href="#">
+                  <img
+                    src="../assets/images/logo-cosmetic.png"
+                    class="w-32"
+                    alt="logo"
+                  />
+                </a>
+              </div>
+
+              <div class="flex gap-2">
+                <svg
+                  fill="none"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-5"
+                >
+                  <use href="/assets/icons.svg#icon-map"></use>
+                </svg>
+
+                <p class="text-sm max-w-2/3">
+                  29 SE 2nd Ave, Miami Florida 33131, United States
+                </p>
+              </div>
+
+              <div class="flex gap-2">
+                <svg
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke-width="1.5"
+                  stroke="currentColor"
+                  class="size-5"
+                >
+                  <use href="/assets/icons.svg#icon-message"></use>
+                </svg>
+
+                <p class="text-sm">info@example.com</p>
+              </div>
+
+              <div>
+                <a
+                  href="#"
+                  class="transition-all hover:text-red-600 text-xl font-semibold"
+                  >(+92) 3942 7879</a
+                >
+              </div>
+            </div>
+
+            <div
+              class="flex max-lg:flex-wrap max-lg:gap-y-10 justify-between grow"
+            >
+              <div class="flex flex-col gap-6 md:mr-28">
+                <p class="text-sm font-semibold">SHOP MORE</p>
+
+                <div class="flex gap-8 md:gap-14">
+                  <ul
+                    class="space-y-4 text-sm [&>li>a]:transition-all [&>li>a:hover]:text-red-600"
+                  >
+                    <li><a href="#">New Arrival</a></li>
+                    <li><a href="#">Sale off</a></li>
+                    <li><a href="#">Makeup Sets</a></li>
+                    <li><a href="#">Lipstick</a></li>
+                    <li><a href="#">Mascara</a></li>
+                  </ul>
+
+                  <ul
+                    class="space-y-4 text-sm [&>li>a]:transition-all [&>li>a:hover]:text-red-600"
+                  >
+                    <li><a href="#">Nail Care</a></li>
+                    <li><a href="#">Lip Care</a></li>
+                    <li><a href="#">Body Care</a></li>
+                    <li><a href="#">Hair Care</a></li>
+                    <li><a href="#">Accessories</a></li>
+                  </ul>
+                </div>
+              </div>
+
+              <div class="flex gap-2 md:gap-28">
+                <div class="flex flex-col gap-6">
+                  <p class="text-sm font-semibold">SHOPPING</p>
+
+                  <ul
+                    class="space-y-4 text-sm [&>li>a]:transition-all [&>li>a:hover]:text-red-600"
+                  >
+                    <li><a href="#">Wishlist</a></li>
+                    <li><a href="#">Shop by Brand</a></li>
+                    <li><a href="#">Offers</a></li>
+                    <li><a href="#">Track order</a></li>
+                    <li><a href="#">Size Guide</a></li>
+                  </ul>
+                </div>
+
+                <div class="flex flex-col gap-6">
+                  <p class="text-sm font-semibold">INFOMATION</p>
+
+                  <ul
+                    class="space-y-4 text-sm [&>li>a]:transition-all [&>li>a:hover]:text-red-600"
+                  >
+                    <li><a href="#">Track Order</a></li>
+                    <li><a href="#">Shipping & Returns</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Help</a></li>
+                    <li><a href="#">Gift Cards</a></li>
+                  </ul>
+                </div>
+
+                <div class="flex flex-col gap-6">
+                  <p class="text-sm font-semibold">ACCOUNT</p>
+
+                  <ul
+                    class="space-y-4 text-sm [&>li>a]:transition-all [&>li>a:hover]:text-red-600"
+                  >
+                    <li><a href="#">Cart</a></li>
+                    <li><a href="#">My account</a></li>
+                    <li><a href="#">My orders</a></li>
+                    <li><a href="#">Wishlist</a></li>
+                    <li><a href="#">Affiliate Program</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Copyright -->
+        <section>
+          <div
+            class="flex max-md:flex-col gap-4 justify-between items-center border-t border-primary py-8"
+          >
+            <p class="text-xs text-primary-400 font-medium">
+              Copyright © Merto. All Rights Reserved
+            </p>
+
+            <ul
+              class="flex gap-4 [&>li>a>svg]:transition-all [&>li>a>svg:hover]:fill-red-600"
+            >
+              <li>
+                <a href="#">
+                  <svg x="0px" y="0px" class="size-8">
+                    <use href="/assets/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <svg x="0px" y="0px" class="size-8">
+                    <use href="/assets/icons.svg#icon-tiktok"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <svg x="0px" y="0px" class="size-8">
+                    <use href="/assets/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+
+              <li>
+                <a href="#">
+                  <svg x="0px" y="0px" class="size-8">
+                    <use href="/assets/icons.svg#icon-xtwitter"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+
+            <div>
+              <img
+                src="../assets/images/payment-icons-2.png"
+                alt="payment"
+                class="w-80"
+              />
+            </div>
+          </div>
+        </section>
+      </div>
+    </footer>
+
+    <!-- Modules -->
+    <div
+    id="login-module"
+    data-is-open="false"
+    class="data-[is-open=false]:hidden fixed z-50 top-1/2 left-1/2 -translate-1/2 bg-white w-11/12 lg:w-9/12 xl:w-3/5 grid md:grid-cols-2">
+     <div class="max-md:hidden">
+       <img src="../assets/images/login-banner.jpg" alt="login banner" class="w-full h-full object-cover">
+     </div>
+
+     <div class="flex flex-col justify-between">
+       <div class="flex justify-end">
+         <button id="close-login-btn" class="bg-black rounded-bl-md p-1 cursor-pointer transition-all duration-300 hover:bg-red-600">
+           <svg x="0px" y="0px" class="size-5 fill-white">
+             <use href="/assets/icons.svg#icon-close"></use>
+           </svg>
+         </button>
+       </div>
+
+       <div class="flex flex-col gap-4 px-12">
+         <h3 class="font-semibold text-xl text-center">Login</h3>
+
+         <div>
+           <input type="text" class="bg-primary-100 w-full text-xs p-4 rounded-md outline-none font-medium" placeholder="Username or email address*">
+         </div>
+
+         <div>
+           <input type="text" class="bg-primary-100 w-full text-xs p-4 rounded-md outline-none font-medium" placeholder="Password*">
+         </div>
+
+         <div class="flex justify-between items-center text-primary-400 text-xs font-normal">
+           <div class="flex items-center gap-1">
+             <input type="checkbox" name="Remember">
+             <label for="Remember">Remember me</label>
+           </div>
+           
+           <a href="#">
+             Forget Password?
+           </a>
+         </div>
+
+         <button class="bg-black text-white transition-all duration-300 hover:bg-red-600 py-3 font-semibold text-sm rounded-md cursor-pointer">LOG IN</button>
+       </div>
+
+       <div class="flex max-sm:flex-wrap justify-center items-center gap-2 border-t border-primary py-3 px-5 text-xs font-normal">
+         <p class="text-primary-400">You dont have an account yet?</p>
+
+         <a href="#">
+           Register Now
+         </a>
+       </div>
+     </div>
+    </div>
+    <!-- Overlay -->
+    <div
+      class="Overlay fixed top-0 bottom-0 w-full bg-black/50 z-40 hidden"
+    ></div>
+
+  </body>
 </html>
