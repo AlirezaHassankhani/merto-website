@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: "Damion";
-    src: url(../../assets/fonts/Damion-Regular.ttf) format("truetype");
+    src: url(../../public/fonts/Damion-Regular.ttf) format("truetype");
 }
 
 @theme {
