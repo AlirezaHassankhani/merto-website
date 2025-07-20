@@ -1,0 +1,36 @@
+@import "tailwindcss";
+
+@font-face {
+    font-family: "Damion";
+    src: url(../../assets/fonts/Damion-Regular.ttf) format("truetype");
+}
+
+@theme {
+    --font-poppins: "poppins";
+}
+
+@layer utilities {
+    .container {
+        @apply max-w-full max-lg:px-5 max-2xl:px-12  2xl:max-w-[1300px] 2xl:mx-auto;
+    }
+}
+
+@layer base {
+    body {
+        font-family: "poppins";
+    }
+}
+
+@theme {
+    --color-primary: #E5E5E5;
+    --color-primary-100: #EBEEF0;
+    --color-primary-200: #F5F5F5;
+    --color-primary-300: #f7f7f7;
+    --color-primary-400: #848484;
+
+    --color-red-200: #FAE9EC;
+    --color-red-400: #de1010;
+    --color-red-600: #C6213B;
+
+    --font-damion: "Damion"
+}
