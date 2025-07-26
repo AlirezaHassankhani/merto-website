@@ -5,8 +5,10 @@
     "tailwindcss": "^4.1.11"
   },
   "scripts": {
-    "tailwind": "npx @tailwindcss/cli -i ./src/css/input.css -o ./dist/css/style.css --watch",
-    "format": "npx prettier --write ."
+    "tailwind": "npx @tailwindcss/cli -i ./src/css/input.css -o ./dist/css/style.css",
+    "ts": "tsc",
+    "format": "npx prettier --write .",
+    "dev": "npm run tailwind && npm run ts && npm run format"
   },
   "devDependencies": {
     "prettier": "^3.6.2"
