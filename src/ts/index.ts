@@ -73,7 +73,7 @@ observerAnimation.observe(sliderOne);
 observerAnimation.observe(sliderTwo);
 observerAnimation.observe(sliderThree);
 
-const swiperItems = new Swiper(".swiper-items", {
+new Swiper(".swiper-items", {
   loop: true,
   dirction: "vertical",
   slidesPerView: 2,
@@ -98,7 +98,7 @@ const swiperItems = new Swiper(".swiper-items", {
   },
 });
 
-const swiperBrands = new Swiper(".swiper-brands", {
+new Swiper(".swiper-brands", {
   loop: true,
   dirction: "vertical",
   slidesPerView: 2,
@@ -117,7 +117,7 @@ const swiperBrands = new Swiper(".swiper-brands", {
   },
 });
 
-const swiperProduct = new Swiper(".swiper-product", {
+new Swiper(".swiper-product", {
   slidesPerView: 1,
   loop: true,
   dirction: "vertical",
@@ -157,6 +157,7 @@ function getFlashDealSlideTemplate({
   price,
   discount,
   src,
+  star,
 }: IProduct) {
   return `
                   <div class="border-b border-r border-primary">
@@ -187,26 +188,9 @@ function getFlashDealSlideTemplate({
                         <p class="text-sm text-primary-400 line-through">$${price}</p>
                       </div>
 
+                      
                       <div class="flex gap-1">
-                        <svg fill="currentColor" class="size-4 text-amber-300">
-                          <use href="icons.svg#icon-star"></use>
-                        </svg>
-
-                        <svg fill="currentColor" class="size-4 text-amber-300">
-                          <use href="icons.svg#icon-star"></use>
-                        </svg>
-
-                        <svg fill="currentColor" class="size-4 text-amber-300">
-                          <use href="icons.svg#icon-star"></use>
-                        </svg>
-
-                        <svg fill="currentColor" class="size-4">
-                          <use href="icons.svg#icon-star"></use>
-                        </svg>
-
-                        <svg fill="currentColor" class="size-4">
-                          <use href="icons.svg#icon-star"></use>
-                        </svg>
+                      ${handleStar(star)}
                       </div>
 
                       <div
@@ -277,3 +261,22 @@ function getFlashDealSlideTemplate({
                   </div>
   `;
 }
+
+function handleStar(star: number): string {
+  const maxStars = 5;
+  let html = "";
+
+  for (let i = 0; i < maxStars; i++) {
+    const isFilled = i < star;
+
+    html += `
+      <svg fill="currentColor" class="size-4 ${isFilled ? "text-amber-300" : "text-gray-300"}">
+        <use href="icons.svg#icon-star"></use>
+      </svg>
+    `;
+  }
+
+  return html;
+}
+
+

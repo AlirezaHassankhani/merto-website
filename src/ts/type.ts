@@ -4,5 +4,5 @@ export interface IProduct {
     src: string;
     price: number;
     discount: number;
-
+    star: number;
 }
