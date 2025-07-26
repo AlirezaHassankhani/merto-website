@@ -5,72 +5,42 @@
       "price": "30",
       "discount": "37",
       "star": "5",
-      "src": "1.jpg",
-      "items": [
-        { "src": "1-1-s.jpg", "thumbnail": "1-1-t.jpg" },
-        { "src": "1-2-s.jpg", "thumbnail": "1-2-t.jpg" },
-        { "src": "1-3-s.jpg", "thumbnail": "1-3-t.jpg" }
-      ]
+      "src": "1.jpg"
     },
     {
       "name": "Makeup Magic Skin Beautifier BB Cream Tinted Moisturizer",
       "price": "46",
       "discount": "24",
       "star": "3",
-      "src": "2.jpg",
-      "items": [
-        { "src": "2-1-s.jpg", "thumbnail": "2-1-t.jpg" },
-        { "src": "2-2-s.jpg", "thumbnail": "2-2-t.jpg" },
-        { "src": "2-3-s.jpg", "thumbnail": "2-3-t.jpg" }
-      ]
+      "src": "2.jpg"
     },
     {
       "name": "AloeMoist Anti Aging Retinol Cream for Face",
       "price": "38",
       "discount": "5",
       "star": "4",
-      "src": "3.jpg",
-      "items": [
-        { "src": "3-1-s.jpg", "thumbnail": "3-1-t.jpg" },
-        { "src": "3-2-s.jpg", "thumbnail": "3-2-t.jpg" },
-        { "src": "3-3-s.jpg", "thumbnail": "3-3-t.jpg" }
-      ]
+      "src": "3.jpg"
     },
     {
       "name": "Make Up For Ever Water Blend Face & Body Foundation",
       "price": "47",
       "discount": "11",
       "star": "1",
-      "src": "4.jpg",
-      "items": [
-        { "src": "4-1-s.jpg", "thumbnail": "4-1-t.jpg" },
-        { "src": "4-2-s.jpg", "thumbnail": "4-2-t.jpg" },
-        { "src": "4-3-s.jpg", "thumbnail": "4-3-t.jpg" }
-      ]
+      "src": "4.jpg"
     },
     {
       "name": "Allure Luminous Intense Lipstick 0.15oz",
       "price": "24",
       "discount": "17",
       "star": "0",
-      "src": "5.jpg",
-      "items": [
-        { "src": "5-1-s.jpg", "thumbnail": "5-1-t.jpg" },
-        { "src": "5-2-s.jpg", "thumbnail": "5-2-t.jpg" },
-        { "src": "5-3-s.jpg", "thumbnail": "5-3-t.jpg" }
-      ]
+      "src": "5.jpg"
     },
     {
       "name": "Eye Shadow Palette, Natural Nudes, 0.19 Ounce",
       "price": "28",
       "discount": "10",
       "star": "2",
-      "src": "6.jpg",
-      "items": [
-        { "src": "6-1-s.jpg", "thumbnail": "6-1-t.jpg" },
-        { "src": "6-2-s.jpg", "thumbnail": "6-2-t.jpg" },
-        { "src": "6-3-s.jpg", "thumbnail": "6-3-t.jpg" }
-      ]
+      "src": "6.jpg"
     }
   ]
 }
