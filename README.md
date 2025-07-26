@@ -10,8 +10,6 @@ Here is a quick look at the Merto landing page:
 ![Desktop View](./public/images/pec.png)
 ![Mobile View](./public/images/per.png)
 
-> You can replace these image paths with your own screenshots.
-
 ## 🚀 Technologies Used
 
 - **HTML5**
