@@ -129,11 +129,19 @@ new Swiper(".swiper-product", {
   },
 });
 
-const flashDeals = document.querySelector(".flash-deals");
+// Fetch Handler
+async function fetchHandler() {
+  const res = await fetch("http://localhost:3000/products");
+  const products: IProduct[] = await res.json();
 
-fetch("http://localhost:3000/products")
-  .then((res) => res.json())
-  .then((products) => flashDealsHandler(products));
+  flashDealsHandler(products);
+  popularProductsHandler(products);
+}
+
+document.addEventListener("DOMContentLoaded", fetchHandler);
+
+// Flash Deals
+const flashDeals = document.querySelector(".flash-deals");
 
 function flashDealsHandler(products: IProduct[]) {
   const fragment = document.createDocumentFragment();
@@ -279,4 +287,120 @@ function handleStar(star: number): string {
   return html;
 }
 
+// Popular Products
 
+const popularProducts = document.querySelector(".popular-products");
+
+function popularProductsHandler(products: IProduct[]) {
+  const fragment = document.createDocumentFragment();
+
+  products.forEach((product) => {
+    const divElem = document.createElement("div");
+    divElem.classList.add(...["border-b", "border-r", "border-primary"]);
+
+    divElem.insertAdjacentHTML(
+      "beforeend",
+      getPoppularProductTemplate(product),
+    );
+    fragment.append(divElem);
+  });
+
+  popularProducts?.append(fragment);
+}
+
+function getPoppularProductTemplate({
+  id,
+  name,
+  price,
+  discount,
+  src,
+}: IProduct) {
+  return `
+  <div
+                class="relative flex flex-col gap-1.5 p-2.5 md:p-3 xl:p-5 rounded-md transition-all hover:shadow-xl group/item"
+              >
+                <div>
+                  <a href="/product/${id}">
+                    <img
+                      src="images/products/${src}"
+                      alt="product image"
+                    />
+                  </a>
+                </div>
+
+                <div>
+                  <a
+                    href="#"
+                    class="text-sm font-medium transition-all hover:text-red-600"
+                  >
+                    ${name}
+                  </a>
+                </div>
+
+                <div class="flex items-center gap-2">
+                  <p class="font-semibold">$${(price * (100 - discount)) / 100}</p>
+
+                  <p class="text-sm text-primary-400 line-through">$${price}</p>
+                </div>
+
+                <div
+                  class="transition-all duration-300 group-hover/item:max-h-36 max-h-0 overflow-hidden flex flex-col gap-0.5 absolute top-5 right-5 z-10"
+                >
+                  <div
+                    class="rounded-md bg-primary-100 p-2 cursor-pointer transition-all hover:bg-black hover:text-white"
+                  >
+                    <svg
+                      fill="none"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      width="18"
+                      height="18"
+                    >
+                      <use href="icons.svg#icon-like"></use>
+                    </svg>
+                  </div>
+
+                  <div
+                    class="rounded-md bg-primary-100 p-2 cursor-pointer transition-all hover:bg-black hover:text-white"
+                  >
+                    <svg
+                      fill="none"
+                      stroke-width="1.5"
+                      stroke="currentColor"
+                      width="18"
+                      height="18"
+                    >
+                      <use href="icons.svg#icon-user"></use>
+                    </svg>
+                  </div>
+
+                  <div
+                    class="rounded-md bg-primary-100 p-2 cursor-pointer transition-all hover:bg-black hover:text-white"
+                  >
+                    <svg
+                      x="0px"
+                      y="0px"
+                      width="18"
+                      height="18"
+                      fill="currentColor"
+                    >
+                      <use href="icons.svg#icon-search"></use>
+                    </svg>
+                  </div>
+
+                  <div
+                    class="rounded-md bg-primary-100 p-2 cursor-pointer transition-all hover:bg-black hover:text-white"
+                  >
+                    <svg
+                      fill="none"
+                      stroke="currentColor"
+                      width="18"
+                      height="18"
+                    >
+                      <use href="icons.svg#icon-cart"></use>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+  `;
+}
