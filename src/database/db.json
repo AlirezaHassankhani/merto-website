@@ -1,0 +1,39 @@
+{
+  "products": [
+    {
+      "name": "Makeup Brushes Artisan Easel Elite Cosmetics",
+      "price": "30",
+      "discount": "37",
+      "star": "5",
+      "src": "1.jpg",
+      "gallery": ["", "", ""]
+    },
+    {
+      "title": "",
+      "name": "",
+      "price": "",
+      "discount": "",
+      "star": "",
+      "src": "",
+      "gallery": ["", "", ""]
+    },
+    {
+      "title": "",
+      "name": "",
+      "price": "",
+      "discount": "",
+      "star": "",
+      "src": "",
+      "gallery": ["", "", ""]
+    },
+    {
+      "title": "",
+      "name": "",
+      "price": "",
+      "discount": "",
+      "star": "",
+      "src": "",
+      "gallery": ["", "", ""]
+    }
+  ]
+}

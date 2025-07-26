@@ -1,36 +1,85 @@
 @import "tailwindcss";
 
 @font-face {
-    font-family: "Damion";
-    src: url(../../public/fonts/Damion-Regular.ttf) format("truetype");
+  font-family: "Damion";
+  src: url(../../public/fonts/Damion-Regular.ttf) format("truetype");
 }
 
 @theme {
-    --font-poppins: "poppins";
+  --font-poppins: "poppins";
 }
 
 @layer utilities {
-    .container {
-        @apply max-w-full max-lg:px-5 max-2xl:px-12  2xl:max-w-[1300px] 2xl:mx-auto;
-    }
+  .container {
+    @apply max-w-full max-lg:px-5 max-2xl:px-12  2xl:max-w-[1300px] 2xl:mx-auto;
+  }
 }
 
 @layer base {
-    body {
-        font-family: "poppins";
-    }
+  body {
+    font-family: "poppins";
+  }
 }
 
 @theme {
-    --color-primary: #E5E5E5;
-    --color-primary-100: #EBEEF0;
-    --color-primary-200: #F5F5F5;
-    --color-primary-300: #f7f7f7;
-    --color-primary-400: #848484;
+  --color-primary: #e5e5e5;
+  --color-primary-100: #ebeef0;
+  --color-primary-200: #f5f5f5;
+  --color-primary-300: #f7f7f7;
+  --color-primary-400: #848484;
 
-    --color-red-200: #FAE9EC;
-    --color-red-400: #de1010;
-    --color-red-600: #C6213B;
+  --color-red-200: #fae9ec;
+  --color-red-400: #de1010;
+  --color-red-600: #c6213b;
 
-    --font-damion: "Damion"
+  --font-damion: "Damion";
+}
+
+/* flatrov gallery */
+
+.flatrov {
+    display: flex;
+    flex-direction: row;
+    gap: 0.75rem;
+}
+
+.flatrov .flatrov-wrapper {
+    border: 1px solid #E5E5E5;
+    border-radius: 0.25rem;
+    overflow: hidden;
+}
+
+.flatrov .flatrov-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.flatrov .flatrov-thumbnails {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.flatrov .flatrov-thumbnails .thumbnail-image {
+    border: 1px solid #E5E5E5;
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 0.25rem;
+    transition: all 150ms;
+}
+
+.flatrov .flatrov-thumbnails .thumbnail-image:hover {
+    border: 1px solid #5E5E5E;
+}
+
+.flatrov .flatrov-thumbnails .thumbnail-image[data-is-active="true"] {
+    border: 1px solid #5E5E5E !important;
+    
+}
+
+.flatrov .flatrov-thumbnails .thumbnail-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }

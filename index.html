@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -7,19 +7,22 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900,100italic,200italic,300italic,400italic,500italic,600italic,700italic,800italic,900italic&display=swap&ver=1748016088"
     />
-    <link rel="stylesheet" href="./dist/css/swiper-bundle.css" />
     <link rel="stylesheet" href="./dist/css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
 
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js" defer></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js" defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/SplitText.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <script src="./dist/js/swiper-bundle.js" defer></script>
+    
     <script src="./dist/js/app.js" defer></script>
     <script src="./dist/js/index.js" defer></script>
-    <script src="./dist/js/homeSlider.js" defer></script>
     <title>merto</title>
-    <base href="./public/">
+    <base href="./public/" />
   </head>
   <body>
     <header>
@@ -339,7 +342,8 @@
               </div>
 
               <div class="flex justify-between gap-4">
-                <button class="login-btn flex items-center gap-2 font-semibold cursor-pointer transition-all hover:text-red-600"
+                <button
+                  class="login-btn flex items-center gap-2 font-semibold cursor-pointer transition-all hover:text-red-600"
                 >
                   <svg
                     fill="none"
@@ -770,10 +774,7 @@
                 class="fav-brand-item flex flex-col items-center origin-center group"
               >
                 <div class="relative">
-                  <img
-                    src="images/cosmetic-brand-2.png"
-                    alt="brand image"
-                  />
+                  <img src="images/cosmetic-brand-2.png" alt="brand image" />
 
                   <div
                     class="transition duration-300 group-hover:-scale-x-100 absolute -z-10 top-0 w-full h-10/12 bg-[#FDBA6D] max-lg:rounded-tr-[4rem] max-lg:rounded-bl-[4rem] rounded-tr-[6rem] rounded-bl-[6rem] rounded-tl-sm rounded-br-sm"
@@ -789,10 +790,7 @@
                 class="fav-brand-item flex flex-col items-center origin-center group"
               >
                 <div class="relative">
-                  <img
-                    src="images/cosmetic-brand-3.png"
-                    alt="brand image"
-                  />
+                  <img src="images/cosmetic-brand-3.png" alt="brand image" />
 
                   <div
                     class="transition duration-300 group-hover:-scale-x-100 absolute -z-10 top-0 w-full h-10/12 bg-[#F05D74] max-lg:rounded-tr-[4rem] max-lg:rounded-bl-[4rem] rounded-tr-[6rem] rounded-bl-[6rem] rounded-tl-sm rounded-br-sm"
@@ -808,10 +806,7 @@
                 class="fav-brand-item flex flex-col items-center origin-center group"
               >
                 <div class="relative">
-                  <img
-                    src="images/cosmetic-brand-4.png"
-                    alt="brand image"
-                  />
+                  <img src="images/cosmetic-brand-4.png" alt="brand image" />
 
                   <div
                     class="transition duration-300 group-hover:-scale-x-100 absolute -z-10 top-0 w-full h-10/12 bg-[#7CBF5C] max-lg:rounded-tr-[4rem] max-lg:rounded-bl-[4rem] rounded-tr-[6rem] rounded-bl-[6rem] rounded-tl-sm rounded-br-sm"
@@ -2478,11 +2473,7 @@
             <div class="flex flex-col gap-5">
               <div>
                 <a href="#">
-                  <img
-                    src="images/logo-cosmetic.png"
-                    class="w-32"
-                    alt="logo"
-                  />
+                  <img src="images/logo-cosmetic.png" class="w-32" alt="logo" />
                 </a>
               </div>
 
@@ -2658,17 +2649,25 @@
     </footer>
 
     <!-- Modules -->
-     <div
-     id="login-module"
-     data-is-open="false"
-     class="data-[is-open=false]:hidden fixed z-50 top-1/2 left-1/2 -translate-1/2 bg-white w-11/12 lg:w-9/12 xl:w-3/5 grid md:grid-cols-2">
+    <div
+      id="login-module"
+      data-is-open="false"
+      class="data-[is-open=false]:hidden fixed z-50 top-1/2 left-1/2 -translate-1/2 bg-white w-11/12 lg:w-9/12 xl:w-3/5 grid md:grid-cols-2"
+    >
       <div class="max-md:hidden">
-        <img src="images/login-banner.jpg" alt="login banner" class="w-full h-full object-cover">
+        <img
+          src="images/login-banner.jpg"
+          alt="login banner"
+          class="w-full h-full object-cover"
+        />
       </div>
 
       <div class="flex flex-col justify-between">
         <div class="flex justify-end">
-          <button id="close-login-btn" class="bg-black rounded-bl-md p-1 cursor-pointer transition-all duration-300 hover:bg-red-600">
+          <button
+            id="close-login-btn"
+            class="bg-black rounded-bl-md p-1 cursor-pointer transition-all duration-300 hover:bg-red-600"
+          >
             <svg x="0px" y="0px" class="size-5 fill-white">
               <use href="icons.svg#icon-close"></use>
             </svg>
@@ -2679,36 +2678,48 @@
           <h3 class="font-semibold text-xl text-center">Login</h3>
 
           <div>
-            <input type="text" class="bg-primary-100 w-full text-xs p-4 rounded-md outline-none font-medium" placeholder="Username or email address*">
+            <input
+              type="text"
+              class="bg-primary-100 w-full text-xs p-4 rounded-md outline-none font-medium"
+              placeholder="Username or email address*"
+            />
           </div>
 
           <div>
-            <input type="text" class="bg-primary-100 w-full text-xs p-4 rounded-md outline-none font-medium" placeholder="Password*">
+            <input
+              type="text"
+              class="bg-primary-100 w-full text-xs p-4 rounded-md outline-none font-medium"
+              placeholder="Password*"
+            />
           </div>
 
-          <div class="flex justify-between items-center text-primary-400 text-xs font-normal">
+          <div
+            class="flex justify-between items-center text-primary-400 text-xs font-normal"
+          >
             <div class="flex items-center gap-1">
-              <input type="checkbox" name="Remember">
+              <input type="checkbox" name="Remember" />
               <label for="Remember">Remember me</label>
             </div>
-            
-            <a href="#">
-              Forget Password?
-            </a>
+
+            <a href="#"> Forget Password? </a>
           </div>
 
-          <button class="bg-black text-white transition-all duration-300 hover:bg-red-600 py-3 font-semibold text-sm rounded-md cursor-pointer">LOG IN</button>
+          <button
+            class="bg-black text-white transition-all duration-300 hover:bg-red-600 py-3 font-semibold text-sm rounded-md cursor-pointer"
+          >
+            LOG IN
+          </button>
         </div>
 
-        <div class="flex max-sm:flex-wrap justify-center items-center gap-2 border-t border-primary py-3 px-5 text-xs font-normal">
+        <div
+          class="flex max-sm:flex-wrap justify-center items-center gap-2 border-t border-primary py-3 px-5 text-xs font-normal"
+        >
           <p class="text-primary-400">You dont have an account yet?</p>
 
-          <a href="#">
-            Register Now
-          </a>
+          <a href="#"> Register Now </a>
         </div>
       </div>
-     </div>
+    </div>
     <!-- Overlay -->
     <div
       class="Overlay fixed top-0 bottom-0 w-full bg-black/50 z-40 hidden"

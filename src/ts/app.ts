@@ -3,7 +3,7 @@ const $ = document;
 const overlay = $.querySelector(".Overlay");
 
 const computerMenuWrapper = $.querySelector(
-  "#computer-menu-wrapper"
+  "#computer-menu-wrapper",
 ) as HTMLElement;
 const computerMenu = $.querySelector("#computer-menu") as HTMLElement;
 const mobileMenu = $.querySelector("#mobile-menu");
@@ -39,10 +39,10 @@ const observer = new IntersectionObserver((entries) => {
 observer.observe(computerMenuWrapper);
 
 const overlayOpen = () => {
-  if(overlay instanceof HTMLElement) {
+  if (overlay instanceof HTMLElement) {
     overlay.classList.remove("hidden");
   }
-}
+};
 
 const overlayClose = () => {
   overlay?.classList.add("hidden");
@@ -50,7 +50,7 @@ const overlayClose = () => {
   if (openElement instanceof HTMLElement) {
     openElement.dataset.isOpen = "false";
   }
-}
+};
 
 overlay?.addEventListener("click", overlayClose);
 
@@ -63,19 +63,19 @@ menuComputerBtn?.addEventListener("click", () => {
 });
 
 mobileMenuBtn?.addEventListener("click", () => {
-  if(mobileMenu instanceof HTMLElement) {
-    mobileMenu.dataset.isOpen = "true"
-    overlayOpen()
+  if (mobileMenu instanceof HTMLElement) {
+    mobileMenu.dataset.isOpen = "true";
+    overlayOpen();
   }
-})
+});
 
-mobileCloseBtn?.addEventListener("click", overlayClose)
+mobileCloseBtn?.addEventListener("click", overlayClose);
 
 loginBtn?.addEventListener("click", () => {
   overlayOpen();
-  if(loginModule instanceof HTMLElement) {
+  if (loginModule instanceof HTMLElement) {
     loginModule.dataset.isOpen = "true";
   }
-})
+});
 
 closeLoginBtn?.addEventListener("click", overlayClose);
