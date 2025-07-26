@@ -38,11 +38,12 @@ export default class Gallery {
     this.option = option;
 
     this.assignThumbnails();
-    this.activeImgThumbnail(items[0].id);
     this.changeImage(items[0].id);
   }
 
   changeImage(id: string) {
+    this.disableImgThumbnail();
+    this.activeImgThumbnail(id);
     const mainView = this.gallery.querySelector(
       ".main-view",
     ) as HTMLImageElement;
@@ -56,7 +57,7 @@ export default class Gallery {
   activeImgThumbnail(id: string) {
     const target = this.gallery.querySelector(`[data-id="${id}"]`);
 
-    if(target instanceof HTMLDivElement) {
+    if (target instanceof HTMLDivElement) {
       target.dataset.isActive = "true";
     }
   }
@@ -64,7 +65,7 @@ export default class Gallery {
   disableImgThumbnail() {
     const target = this.gallery.querySelector("[data-is-active=true]");
 
-    if(target instanceof HTMLDivElement) {
+    if (target instanceof HTMLDivElement) {
       target.dataset.isActive = "false";
     }
   }
@@ -110,8 +111,6 @@ export default class Gallery {
 
     // Event Click
     div.addEventListener("click", () => {
-      this.disableImgThumbnail();
-      this.activeImgThumbnail(id);
       this.changeImage(id);
     });
 

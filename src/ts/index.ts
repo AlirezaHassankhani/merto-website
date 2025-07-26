@@ -3,6 +3,8 @@ declare var ScrollTrigger: any;
 declare var Swiper: any;
 declare var SplitText: any;
 
+import { IProduct } from "./type.js";
+
 document.addEventListener("DOMContentLoaded", () => {
   gsap.registerPlugin(ScrollTrigger);
 
@@ -25,7 +27,6 @@ document.addEventListener("DOMContentLoaded", () => {
     ease: "power2.out",
   });
 });
-
 
 const sliderOne = document.querySelector(".slider-cs-1") as HTMLElement;
 const sliderTwo = document.querySelector(".slider-cs-2") as HTMLElement;
@@ -127,3 +128,152 @@ const swiperProduct = new Swiper(".swiper-product", {
     delay: 4000,
   },
 });
+
+const flashDeals = document.querySelector(".flash-deals");
+
+fetch("http://localhost:3000/products")
+  .then((res) => res.json())
+  .then((products) => flashDealsHandler(products));
+
+function flashDealsHandler(products: IProduct[]) {
+  const fragment = document.createDocumentFragment();
+
+  products.forEach((product) => {
+    const swiperSlide = document.createElement("div");
+    swiperSlide.classList.add("swiper-slide");
+    swiperSlide.insertAdjacentHTML(
+      "beforeend",
+      getFlashDealSlideTemplate(product),
+    );
+    fragment.append(swiperSlide);
+  });
+
+  flashDeals?.append(fragment);
+}
+
+function getFlashDealSlideTemplate({
+  id,
+  name,
+  price,
+  discount,
+  src,
+}: IProduct) {
+  return `
+                  <div class="border-b border-r border-primary">
+                    <div
+                      class="relative flex flex-col gap-1.5 p-2.5 md:p-3 xl:p-5 rounded-md transition-all hover:shadow-xl group/item"
+                    >
+                      <div>
+                        <a href="/product/${id}">
+                          <img
+                            src="images/products/${src}"
+                            alt="product image"
+                          />
+                        </a>
+                      </div>
+
+                      <div>
+                        <a
+                          href="/product/${id}"
+                          class="text-sm font-medium transition-all hover:text-red-600"
+                        >
+                          ${name}
+                        </a>
+                      </div>
+
+                      <div class="flex items-center gap-2">
+                        <p class="font-semibold">$${(price * (100 - discount)) / 100}</p>
+
+                        <p class="text-sm text-primary-400 line-through">$${price}</p>
+                      </div>
+
+                      <div class="flex gap-1">
+                        <svg fill="currentColor" class="size-4 text-amber-300">
+                          <use href="icons.svg#icon-star"></use>
+                        </svg>
+
+                        <svg fill="currentColor" class="size-4 text-amber-300">
+                          <use href="icons.svg#icon-star"></use>
+                        </svg>
+
+                        <svg fill="currentColor" class="size-4 text-amber-300">
+                          <use href="icons.svg#icon-star"></use>
+                        </svg>
+
+                        <svg fill="currentColor" class="size-4">
+                          <use href="icons.svg#icon-star"></use>
+                        </svg>
+
+                        <svg fill="currentColor" class="size-4">
+                          <use href="icons.svg#icon-star"></use>
+                        </svg>
+                      </div>
+
+                      <div
+                        class="absolute top-2.5 left-2.5 md:top-3 md:left-3 xl:top-5 xl:left-5 bg-red-600 px-2 rounded-md"
+                      >
+                        <span class="text-xs text-white font-medium">-${discount}%</span>
+                      </div>
+
+                      <div
+                        class="transition-all duration-300 group-hover/item:max-h-36 max-h-0 overflow-hidden flex flex-col gap-0.5 absolute top-5 right-5 z-10"
+                      >
+                        <div
+                          class="rounded-md bg-primary-100 p-2 cursor-pointer transition-all hover:bg-black hover:text-white"
+                        >
+                          <svg
+                            fill="none"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            width="18"
+                            height="18"
+                          >
+                            <use href="icons.svg#icon-like"></use>
+                          </svg>
+                        </div>
+
+                        <div
+                          class="rounded-md bg-primary-100 p-2 cursor-pointer transition-all hover:bg-black hover:text-white"
+                        >
+                          <svg
+                            fill="none"
+                            stroke-width="1.5"
+                            stroke="currentColor"
+                            width="18"
+                            height="18"
+                          >
+                            <use href="icons.svg#icon-user"></use>
+                          </svg>
+                        </div>
+
+                        <div
+                          class="rounded-md bg-primary-100 p-2 cursor-pointer transition-all hover:bg-black hover:text-white"
+                        >
+                          <svg
+                            x="0px"
+                            y="0px"
+                            width="18"
+                            height="18"
+                            fill="currentColor"
+                          >
+                            <use href="icons.svg#icon-search"></use>
+                          </svg>
+                        </div>
+
+                        <div
+                          class="rounded-md bg-primary-100 p-2 cursor-pointer transition-all hover:bg-black hover:text-white"
+                        >
+                          <svg
+                            fill="none"
+                            stroke="currentColor"
+                            width="18"
+                            height="18"
+                          >
+                            <use href="icons.svg#icon-cart"></use>
+                          </svg>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+  `;
+}
